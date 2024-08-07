@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Andrian Kobryn</h1>
+<h1 align="center">Hi 👋, I'm Andrian</h1>
 
 <div align="center"> 
   <a href="mailto:andrikkobrin@gmail.com">
