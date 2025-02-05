@@ -1,5 +1,6 @@
 @use "../../styles/Variables.module.scss" as variables;
 @use "../../styles/Fonts.module.scss";
+@use "../../styles/Mixins.module.scss" as mixins;
 
 .support-panel {
     position: fixed;
@@ -54,11 +55,9 @@
         transform: translateY(-50%);
         white-space: nowrap;
         background-color: black;
-        color: white;
-        font-family: Rubik;
         padding: 10px 15px;
         border-radius: 8px;
-        font-size: 16px;
+        @include mixins.text-styles(16px, white, Tight);
 
         &::before {
             content: "";

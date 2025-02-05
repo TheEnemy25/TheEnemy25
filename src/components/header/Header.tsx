@@ -6,20 +6,34 @@ const Header: React.FC = () => {
     return (
         <>
             <header className="header">
-                <div className="header__logo-nav">
+                <div className="header__container">
                     <Link to="/" className='header__logo'>
-                        <div className="header__logo-link">Portfolio</div>
+                        Portfolio
                     </Link>
+
                     <nav className="header__nav">
-                        <ul className="nav__list">
+                        <ul className="header__nav-list">
                             <li>
-                                <Link to="/movie/movies-list" className="nav__link">Stack</Link>
+                                <Link to="/movie/movies-list">Stack</Link>
                             </li>
                             <li>
-                                <Link to="/cinema-theater/CinemaTheater" className="nav__link">Experience</Link>
+                                <Link to="/cinema-theater/CinemaTheater">Experience</Link>
                             </li>
                         </ul>
                     </nav>
+
+                    <div className="header__controls">
+                        <div className="language-switch">
+                            <button className="language-switch__btn">EN</button>
+                            <span className='language-switch__stick'>|</span>
+                            <button className="language-switch__btn">UA</button>
+                        </div>
+
+                        {/* <div className="theme-switch">
+                            <button className="theme-switch__btn">🌙</button>
+                            <button className="theme-switch__btn">☀️</button>
+                        </div> */}
+                    </div>
                 </div>
             </header>
         </>
