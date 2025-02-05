@@ -3,7 +3,7 @@ import LinkedInIcon from "../assets/svgs/LinkedInIcon";
 import PdfIcon from "../assets/svgs/PdfIcon";
 
 export const supportIconsData = [
-    { icon: <PdfIcon />, title: "My Portfolio", className: "pdf-icon" },
-    { icon: <GitHubIcon />, title: "My GitHub", className: "github-icon" },
-    { icon: <LinkedInIcon />, title: "My LinkedIn", className: "linked-icon" },
+    { icon: <PdfIcon className="pdf-icon" />, title: "My Portfolio" },
+    { icon: <GitHubIcon className="github-icon" />, title: "My GitHub" },
+    { icon: <LinkedInIcon className="linked-icon" />, title: "My LinkedIn" },
 ];

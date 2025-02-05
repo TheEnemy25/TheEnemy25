@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SupportPanel.scss";
 import { Link } from "react-router-dom";
-import { supportIconsData } from "../../data/SupportIconsData";
+import { supportIconsData } from "../../data/supportIconsData";
 
 const SupportPanel = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -17,10 +17,7 @@ const SupportPanel = () => {
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
-                        {React.cloneElement(data.icon, {
-                            className: `${data.className} ${hoveredIndex === index ? "hovered" : ""
-                                }`,
-                        })}
+                        {data.icon}
                         {hoveredIndex === index && (
                             <span className="support-panel__tooltip">{data.title}</span>
                         )}
