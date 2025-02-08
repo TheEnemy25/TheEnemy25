@@ -1,5 +1,13 @@
 // @import "tailwindcss";
 
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: -1000;
+}
+
 /* reset.css */
 *,
 *::before,

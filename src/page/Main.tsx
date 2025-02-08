@@ -1,12 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 import './Main.scss';
-import HomePage from './HomePage';
+import About from '../containers/about/About';
 
 const Main: React.FC = () => {
     return (
         <>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<About />} />
+
             </Routes>
         </>
     );
