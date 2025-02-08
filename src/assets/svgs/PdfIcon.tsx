@@ -1,13 +1,13 @@
 import React from "react";
 
-type PdfIconProps = {
+type IconProps = {
 	width?: string;
 	height?: string;
 	fill?: string;
 	className?: string;
 };
 
-const PdfIcon: React.FC<PdfIconProps> = ({
+const PdfIcon: React.FC<IconProps> = ({
 	width = "40px",
 	height = "40px",
 	fill = "",
@@ -23,11 +23,7 @@ const PdfIcon: React.FC<PdfIconProps> = ({
 			id="_x32_"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 512 512"
-		// xml:space="preserve"
 		>
-			{/* <style type="text/css">
-                .st0{fill:#000000;}
-            </style> */}
 			<g>
 				<path
 					d="M347.746,346.204c-8.398-0.505-28.589,0.691-48.81,4.533c-11.697-11.839-21.826-26.753-29.34-39.053

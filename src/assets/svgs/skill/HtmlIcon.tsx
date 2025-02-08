@@ -1,20 +1,26 @@
 import React from "react";
 
-type HtmlIconProps = {
+type IconProps = {
     width?: string;
     height?: string;
+    fill?: string;
+    className?: string;
 };
 
-const HtmlIcon: React.FC<HtmlIconProps> = ({
-    width = "50px",
-    height = "50px",
+const HtmlIcon: React.FC<IconProps> = ({
+    width = "40px",
+    height = "40px",
+    fill = "",
+    className = "",
 }) => {
     return (
         <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 48 48"
             width={width}
             height={height}
+            fill={fill}
+            className={className}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 48 48"
         >
             <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
             <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />

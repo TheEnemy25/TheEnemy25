@@ -1,20 +1,26 @@
 import React from "react";
 
-type ReactIconProps = {
+type IconProps = {
     width?: string;
     height?: string;
+    fill?: string;
+    className?: string;
 };
 
-const ReactIcon: React.FC<ReactIconProps> = ({
-    width = "50px",
-    height = "50px",
+const ReactIcon: React.FC<IconProps> = ({
+    width = "40px",
+    height = "40px",
+    fill = "",
+    className = "",
 }) => {
     return (
         <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 48 48"
             width={width}
             height={height}
+            fill={fill}
+            className={className}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 48 48"
         >
             <path
                 fill="#80deea"

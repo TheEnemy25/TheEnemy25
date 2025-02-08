@@ -1,36 +1,42 @@
 import React from "react";
 
-type CsharpIconProps = {
+type IconProps = {
     width?: string;
     height?: string;
+    fill?: string;
+    className?: string;
 };
 
-const CsharpIcon: React.FC<CsharpIconProps> = ({
-    width = "50px",
-    height = "50px",
+const CsharpIcon: React.FC<IconProps> = ({
+    width = "40px",
+    height = "40px",
+    fill = "",
+    className = "",
 }) => {
     return (
         <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 256 256"
             width={width}
             height={height}
-            fillRule="evenodd"
+            fill={fill}
+            className={className}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0,0,256,256"
+            fill-rule="evenodd"
         >
             <g
                 fill="none"
-                fillRule="evenodd"
+                fill-rule="evenodd"
                 stroke="none"
-                strokeWidth="1"
-                strokeLinecap="butt"
-                strokeLinejoin="miter"
-                strokeMiterlimit="10"
-                fontFamily="none"
-                fontWeight="none"
-                fontSize="none"
-                textAnchor="none"
-                style={{ mixBlendMode: "normal" }}
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
             >
                 <g transform="scale(5.33333,5.33333)">
                     <path
