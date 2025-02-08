@@ -44,7 +44,7 @@
                 transition: color 0.3s;
 
                 &:hover {
-                    color: variables.$primary-color;
+                    color: variables.$secondary-color;
                 }
             }
         }
@@ -70,7 +70,7 @@
                 transition: background-color 0.3s ease;
 
                 &:hover {
-                    color: variables.$primary-color;
+                    color: variables.$secondary-color;
                 }
             }
         }
