@@ -21,7 +21,7 @@
     &__icon-link {
         position: relative;
         display: flex;
-        fill: black;
+        fill: variables.$white-color;
 
         .pdf-icon {
             transition: fill 0.3s ease;
