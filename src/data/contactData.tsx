@@ -1,8 +1,7 @@
-import { FaMapMarkerAlt, FaAt, FaTelegramPlane, FaSkype, FaGithub, FaLinkedinIn, FaRegFilePdf, FaRegClock } from "react-icons/fa";
+import { FaMapMarkerAlt, FaAt, FaTelegramPlane, FaSkype, FaGithub, FaLinkedinIn, FaRegFilePdf } from "react-icons/fa";
 
 export const contactData = [
     { icon: <FaMapMarkerAlt className="about__social-contact-icon" />, text: "Ukraine, Lviv" },
-    { icon: <FaRegClock className="about__social-contact-icon" />, text: "Loading time...", id: "time" },
     { icon: <FaRegFilePdf className="about__social-contact-icon about__social-contact-icon--pdf" />, link: "https://github.com/TheEnemy25", text: "Curriculum vitae (RESUME)" },
     { icon: <FaAt className="about__social-contact-icon about__social-contact-icon--email" />, link: "mailto:andrikkobrin@gmail.com", text: "andrikkobrin@gmail.com" },
     { icon: <FaLinkedinIn className="about__social-contact-icon about__social-contact-icon--linkedin" />, link: "https://www.linkedin.com/in/andrian-kobryn/", text: "LinkedIn" },

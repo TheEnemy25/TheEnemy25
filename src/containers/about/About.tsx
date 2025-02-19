@@ -20,8 +20,10 @@ const About: React.FC = () => {
                         {contactData.map((item, index) => (
                             <div key={index} className="about__social-contact">
                                 <span className="about__social-contact-icon">{item.icon}</span>
-                                {item.id === "time" ? (
-                                    <p className="about__social-contact-text">{currentTime}</p>
+                                {item.text === "Ukraine, Lviv" ? (
+                                    <p className="about__social-contact-text">
+                                        Ukraine, Lviv | <time dateTime={new Date().toISOString()} className="time-text">{currentTime}</time>
+                                    </p>
                                 ) : item.link ? (
                                     <a href={item.link} className="about__social-contact-link" target="_blank" rel="noopener noreferrer">
                                         {item.text}

@@ -47,6 +47,10 @@
                     &-text,
                     &-link {
                         @include mixins.text-styles(16px, variables.$white-color, Rubik);
+
+                        .time-text {
+                            font-style: italic;
+                        }
                     }
 
                     &-link {
