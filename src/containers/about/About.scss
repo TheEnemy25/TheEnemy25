@@ -5,6 +5,7 @@
 .about {
     display: flex;
     padding: 24px 96px;
+    flex-direction: column;
 
     &__wrapper {
         display: flex;
@@ -95,4 +96,8 @@ $social-colors: (
         will-change: transform;
         transition: transform 0.3s ease;
     }
+}
+
+.about__description {
+    color: white;
 }
