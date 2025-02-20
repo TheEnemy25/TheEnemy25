@@ -6,10 +6,12 @@
     display: flex;
     padding: 24px 96px;
     flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
 
     &__wrapper {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
 
         .about__info {
