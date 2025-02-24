@@ -1,13 +1,3 @@
-// @import "tailwindcss";
-
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    background-color: rgba(0, 0, 0, 0.95);
-    z-index: -1000;
-}
-
 /* reset.css */
 *,
 *::before,
@@ -15,16 +5,22 @@ body {
     box-sizing: border-box;
 }
 
-html {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: -1000;
+    //if you don't need delete height!!!
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    //if you don't need delete height!!!
+    height: 100%;
 }
 
 html,

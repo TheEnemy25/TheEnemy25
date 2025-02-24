@@ -1,0 +1,38 @@
+@use "../../styles/variables.scss" as variables;
+@use "../../styles/fonts.scss";
+@use "../../styles/mixins.scss" as mixins;
+
+.anchor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    position: sticky;
+    padding: 0 48px 0 0;
+    z-index: 998;
+    top: 33%;
+    align-self: start;
+    min-width: max-content;
+    grid-area: anchor;
+
+    &__hr {
+        margin: 0;
+    }
+
+    &__nav {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            &>li>a {
+                @include mixins.text-styles(16px, variables.$white-color, Rubik);
+                transition: color 0.3s;
+
+                &:hover {
+                    color: variables.$secondary-color;
+                }
+            }
+        }
+    }
+}

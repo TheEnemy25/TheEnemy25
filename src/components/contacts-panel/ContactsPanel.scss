@@ -1,0 +1,66 @@
+@use "../../styles/variables.scss" as variables;
+@use "../../styles/fonts.scss";
+@use "../../styles/mixins.scss" as mixins;
+
+.contacts-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    position: sticky;
+    padding: 0 0 0 48px;
+    z-index: 998;
+    top: 33%;
+    align-self: start;
+    min-width: max-content;
+    grid-area: contacts-panel;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        max-width: max-content;
+
+        &-icon {
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+            color: variables.$white-color;
+        }
+
+        &-text,
+        &-link {
+            @include mixins.text-styles(16px, variables.$white-color, Rubik);
+        }
+
+        &-link {
+            color: variables.$white-color;
+            text-decoration: underline;
+            text-decoration-color: variables.$secondary-color-transparent;
+            text-underline-offset: 3px;
+            transition: color 0.3s ease-in-out, text-decoration-color 0.3s ease-in-out;
+
+            &:hover {
+                color: variables.$secondary-color;
+                text-decoration-color: variables.$secondary-color;
+            }
+        }
+    }
+}
+
+$social-colors: (
+    pdf: variables.$pdf-color,
+    email: variables.$email-color,
+    linkedin: variables.$linkedin-color,
+    telegram: variables.$telegram-color,
+    skype: variables.$skype-color,
+    github: variables.$github-color
+);
+
+@each $name, $color in $social-colors {
+    .contacts-panel__item:hover .contacts-panel__item-icon--#{$name} {
+        color: $color;
+        transform: scale(1.3);
+        will-change: transform;
+        transition: transform 0.5s ease;
+    }
+}

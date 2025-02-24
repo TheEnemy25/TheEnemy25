@@ -1,17 +1,20 @@
-@use "../../styles/Variables.module.scss" as variables;
-@use "../../styles/Fonts.module.scss";
-@use "../../styles/Mixins.module.scss" as mixins;
+@use "../../styles/variables.scss" as variables;
+@use "../../styles/fonts.scss";
+@use "../../styles/mixins.scss" as mixins;
 
 .header {
     width: 100%;
-    height: 100px;
+    height: 96px;
     padding: 4px 32px;
+    top: 0;
+    left: 0;
     background-color: variables.$black-color;
-    position: fixed;
+    position: sticky;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     z-index: 1001;
+    opacity: 0.9;
+    grid-area: header;
 
     &__container {
         width: 100%;
@@ -33,8 +36,6 @@
     }
 
     &__nav {
-        margin-left: 40px;
-
         &-list {
             display: flex;
             gap: 24px;

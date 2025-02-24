@@ -1,0 +1,22 @@
+@use "../../styles/variables.scss" as variables;
+@use "../../styles/fonts.scss";
+@use "../../styles/mixins.scss" as mixins;
+
+.biography {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 64px 0 0;
+
+        .biography__summary {
+            &-header {
+                @include mixins.text-styles(48px, variables.$white-color, Tight);
+            }
+
+            &-subtitle {
+                @include mixins.text-styles(16px, variables.$white-color, Rubik);
+            }
+        }
+    }
+}
