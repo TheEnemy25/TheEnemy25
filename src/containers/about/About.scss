@@ -4,38 +4,53 @@
 
 .about {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    gap: 64px;
 
-    &__wrapper {
+    &-container {
         display: flex;
-        width: 100%;
+        flex-direction: column;
+        gap: 24px;
 
-        .about__info {
+        &__header {
             display: flex;
             flex-direction: column;
 
-            .about__header {
-                &-title {
-                    @include mixins.text-styles(48px, variables.$white-color, Tight);
-                }
+            &-title {
+                @include mixins.text-styles(48px, variables.$white-color, Tight);
+            }
 
-                &-subtitle {
-                    @include mixins.text-styles(24px, variables.$white-color, Rubik);
-                }
+            &-subtitle {
+                @include mixins.text-styles(24px, variables.$white-color, Rubik);
             }
         }
 
-        .about__photo {
+        &__info {
             display: flex;
-            align-items: flex-end;
+            flex-direction: column;
+            row-gap: 8px;
 
-            &-img {
-                width: 240px;
-                height: 240px;
-                border-radius: 50%;
-                object-fit: cover;
-                object-position: 0% 25%;
+            &-title {
+                @include mixins.text-styles(24px, variables.$white-color, Tight);
             }
+
+            &-text {
+                @include mixins.text-styles(16px, variables.$white-color, Rubik);
+            }
+        }
+    }
+
+
+    &__photo {
+        display: flex;
+        align-items: flex-start;
+
+        &-img {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 0% 25%;
         }
     }
 }
