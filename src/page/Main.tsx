@@ -1,12 +1,11 @@
-import './Main.scss';
 import About from '../containers/about/About';
-import Biography from '../containers/biography/Biography';
+import Experience from '../containers/experience/Experience';
 
 const Main: React.FC = () => {
     return (
         <>
             <About />
-            <Biography />
+            <Experience />
         </>
     );
 };
