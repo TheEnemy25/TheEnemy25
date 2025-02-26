@@ -1,8 +1,7 @@
-@mixin text-styles($size, $color, $family: "", $weight: normal, $line-height: 1.5, $text-decoration: none) {
+@mixin text-styles($size, $color, $family: "", $weight: normal, $text-decoration: none) {
     font-size: $size;
     color: $color;
     font-family: $family;
     font-weight: $weight;
-    line-height: $line-height;
     text-decoration: $text-decoration;
 }

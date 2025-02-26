@@ -1,0 +1,10 @@
+body {
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: -1000;
+}
+
+html,
+body {
+    //if you don't need delete height!!!
+    height: 100%;
+}
