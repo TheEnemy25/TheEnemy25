@@ -10,28 +10,29 @@ const Header: React.FC = () => {
                     Portfolio
                 </Link>
 
-                <nav className="header__nav">
-                    <ul className="header__nav-list">
-                        <li>
-                            <Link to="/movie/movies-list">Stack</Link>
+                <nav className="header__menu">
+                    <ul className="header__menu-list">
+                        <li className="header__menu-item">
+                            <Link to="/movie/movies-list" className="header__menu-link">Stack</Link>
                         </li>
-                        <li>
-                            <Link to="/cinema-theater/CinemaTheater">Experience</Link>
+
+                        <li className="header__menu-item">
+                            <Link to="/cinema-theater/CinemaTheater" className="header__menu-link">Experience</Link>
                         </li>
                     </ul>
                 </nav>
 
                 <div className="header__controls">
-                    <div className="language-switch">
-                        <button className="language-switch__btn">EN</button>
-                        <span className='language-switch__stick'>|</span>
-                        <button className="language-switch__btn">UA</button>
+                    <div className="header__language-switch">
+                        <button className="header__language-switch-btn">EN</button>
+                        <span className="header__language-switch-stick">|</span>
+                        <button className="header__language-switch-btn">UA</button>
                     </div>
 
-                    {/* <div className="theme-switch">
-                            <button className="theme-switch__btn">🌙</button>
-                            <button className="theme-switch__btn">☀️</button>
-                        </div> */}
+                    {/* <div className="header__theme-switch">
+                    <button className="header__theme-switch-btn">🌙</button>
+                    <button className="header__theme-switch-btn">☀️</button>
+                </div> */}
                 </div>
             </header>
         </>

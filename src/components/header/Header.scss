@@ -1,5 +1,4 @@
 @use "../../styles/variables.scss" as variables;
-@use "../../styles/fonts.scss";
 @use "../../styles/mixins.scss" as mixins;
 
 .header {
@@ -30,18 +29,20 @@
         }
     }
 
-    &__nav {
+    &__menu {
         &-list {
             display: flex;
             gap: 24px;
+        }
 
-            &>li>a {
-                @include mixins.text-styles(16px, variables.$white-color, Rubik);
-                transition: color 0.3s;
+        &-item {}
 
-                &:hover {
-                    color: variables.$secondary-color;
-                }
+        &-link {
+            @include mixins.text-styles(16px, variables.$white-color, Rubik);
+            transition: color 0.3s;
+
+            &:hover {
+                color: variables.$secondary-color;
             }
         }
     }
@@ -50,14 +51,14 @@
         display: flex;
         gap: 8px;
 
-        .language-switch {
+        .header__language-switch {
             display: flex;
 
-            &__stick {
+            &-stick {
                 @include mixins.text-styles(16px, variables.$white-color, Rubik);
             }
 
-            &__btn {
+            &-btn {
                 background: none;
                 border: none;
                 cursor: pointer;
