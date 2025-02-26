@@ -1,20 +1,23 @@
 @font-face {
-    font-family: 'Rubik';
-    src: url('fonts/Rubik-Regular.ttf') format('truetype');
+    font-family: 'Pacifico';
+    src: url('fonts/Pacifico-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Tight';
-    src: url('fonts/InterTight-Bold.ttf') format('truetype');
+    src: url('fonts/InterTight-Bold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Pacifico';
-    src: url('fonts/Pacifico-Regular.ttf') format('truetype');
+    font-family: 'Rubik';
+    src: url('fonts/Rubik-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
