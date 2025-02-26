@@ -1,5 +1,4 @@
 @use "../../styles/variables.scss" as variables;
-@use "../../styles/fonts.scss";
 @use "../../styles/mixins.scss" as mixins;
 
 .about {
@@ -21,7 +20,7 @@
             }
 
             &-subtitle {
-                @include mixins.text-styles(24px, variables.$white-color, Rubik);
+                @include mixins.text-styles(24px, variables.$secondary-color, Rubik);
             }
         }
 
@@ -36,6 +35,7 @@
 
             &-text {
                 @include mixins.text-styles(16px, variables.$white-color, Rubik);
+                text-align: justify;
             }
         }
     }
