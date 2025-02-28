@@ -1,3 +1,5 @@
+@use "./styles/functions" as *;
+
 .layout {
     display: grid;
     grid-template-areas:
@@ -8,36 +10,15 @@
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    gap: 16px 32px;
+    gap: rem(16) rem(32);
 }
 
 .main {
     display: flex; //necessarily if there is a display grid then the main container begins to stretch
     flex-direction: column;
-    max-width: 1280px;
+    max-width: rem(1280);
     margin: 0 auto;
     flex: 1 1 auto;
-    gap: 144px 0;
+    gap: rem(144) 0;
     grid-area: main;
 }
-
-// .layout {
-//     display: flex;
-//     flex-direction: column;
-//     min-height: 100vh;
-// }
-
-// .layout__content {
-//     display: grid;
-//     grid-template-columns: auto 1fr auto;
-//     gap: 128px;
-//     flex: 1 1 auto;
-
-// }
-
-// .main {
-//     display: flex;
-//     flex-direction: column;
-//     max-width: 1440px;
-//     margin: 0 auto;
-// }

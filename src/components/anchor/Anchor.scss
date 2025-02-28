@@ -1,13 +1,14 @@
 @use "../../styles/variables.scss" as variables;
 @use "../../styles/mixins.scss" as mixins;
+@use "../../styles/functions" as *;
 
 .anchor {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 16px;
+    justify-content: flex-end;
+    gap: rem(16);
     position: sticky;
-    padding: 0 48px 0 0;
+    padding: 0 dynamic-size(48, 24) 0 0;
     z-index: 998;
     top: 33%;
     align-self: start;
@@ -22,10 +23,10 @@
         &-list {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: rem(8);
 
             &>li>a {
-                @include mixins.text-styles(16px, variables.$white-color, Rubik);
+                @include mixins.text-styles(rem(16), variables.$white-color, Rubik);
                 transition: color 0.3s;
 
                 &:hover {

@@ -1,15 +1,16 @@
-@use "../../styles/variables.scss" as variables;
-@use "../../styles/mixins.scss" as mixins;
+@use "../../styles/variables" as variables;
+@use "../../styles/mixins" as mixins;
+@use "../../styles/functions" as *;
 
 .about {
     display: flex;
     width: 100%;
-    gap: 64px;
+    gap: dynamic-size(48, 16);
 
     &__container {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: rem(24);
     }
 
     &__header {
@@ -17,25 +18,25 @@
         flex-direction: column;
 
         &-title {
-            @include mixins.text-styles(48px, variables.$white-color, Tight);
+            @include mixins.text-styles(dynamic-size(48, 24), variables.$white-color, Tight);
         }
 
         &-subtitle {
-            @include mixins.text-styles(24px, variables.$secondary-color, Rubik);
+            @include mixins.text-styles(dynamic-size(24, 16), variables.$secondary-color, Rubik);
         }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
-        row-gap: 8px;
+        row-gap: rem(8);
 
         &-title {
-            @include mixins.text-styles(24px, variables.$white-color, Tight);
+            @include mixins.text-styles(dynamic-size(24, 16), variables.$white-color, Tight);
         }
 
         &-text {
-            @include mixins.text-styles(16px, variables.$white-color, Rubik);
+            @include mixins.text-styles(dynamic-size(18, 14), variables.$white-color, Rubik);
             text-align: justify;
         }
     }
@@ -45,8 +46,8 @@
         align-items: flex-start;
 
         &-img {
-            width: 240px;
-            height: 240px;
+            width: dynamic-size(240, 120);
+            height: dynamic-size(240, 120);
             border-radius: 50%;
             object-fit: cover;
             object-position: 0% 25%;
