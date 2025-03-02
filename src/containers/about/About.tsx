@@ -1,15 +1,16 @@
 import React from "react";
 import "./About.scss";
 import photo from "/images/photo.png";
+import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
 
     return (
         <>
-            <section className="about">
+            <section id="about" className="about">
                 <article className="about__container">
                     <header className="about__header">
-                        <h1 className="about__header-title">Andrian Kobryn</h1>
+                        <h1 className="about__header-title"><Link to=""></Link>Andrian Kobryn</h1>
                         <h2 className="about__header-subtitle">.NET Developer</h2>
                     </header>
 
