@@ -3,7 +3,7 @@
 @use "../../styles/functions" as *;
 
 .header {
-    width: 100%;
+    max-width: rem(1920);
     height: rem(96);
     padding: rem(4) rem(32);
     top: 0;
@@ -11,7 +11,6 @@
     background-color: variables.$black-color;
     position: sticky;
     display: flex;
-    justify-content: space-around;
     z-index: 1001;
     opacity: 0.9;
     grid-area: header;
@@ -19,8 +18,6 @@
     justify-content: space-between;
 
     &__logo {
-        position: relative;
-        overflow: hidden;
         @include mixins.text-styles(dynamic-size(56, 40), variables.$white-color, Pacifico);
         transition: transform 0.3s ease;
         will-change: transform;
@@ -31,6 +28,7 @@
     }
 
     &__menu {
+
         &-list {
             display: flex;
             gap: rem(24);

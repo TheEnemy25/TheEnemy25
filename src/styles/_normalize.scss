@@ -6,15 +6,13 @@
 }
 
 body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    line-height: 1.5;
+    min-height: 100%;
 }
 
 html {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
 }
 
 html,
@@ -105,6 +103,13 @@ video {
     vertical-align: baseline;
 }
 
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -118,10 +123,6 @@ menu,
 nav,
 section {
     display: block;
-}
-
-body {
-    line-height: 1.5;
 }
 
 ol,
