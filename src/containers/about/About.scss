@@ -46,9 +46,7 @@
         align-items: flex-start;
 
         &-img {
-            display: flex;
             width: dynamic-size(240, 120);
-            max-width: dynamic-size(240, 120);
             height: dynamic-size(240, 120);
             border-radius: 50%;
             object-fit: cover;
