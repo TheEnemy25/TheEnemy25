@@ -6,7 +6,7 @@ const About: React.FC = () => {
 
     return (
         <>
-            <section className="about">
+            <section id="about" className="about">
                 <article className="about__container">
                     <header className="about__header">
                         <h1 className="about__header-title">Andrian Kobryn</h1>
