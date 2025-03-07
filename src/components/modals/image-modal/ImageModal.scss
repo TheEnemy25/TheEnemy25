@@ -1,0 +1,11 @@
+@use '../../../styles/abstracts' as *;
+
+.image-modal {
+    max-width: rem(320);
+
+    &__page--about {
+        min-width: rem(320);
+        max-height: 100vh;
+        object-fit: cover;
+    }
+}

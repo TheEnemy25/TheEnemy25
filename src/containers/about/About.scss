@@ -1,6 +1,4 @@
-@use "../../styles/variables" as variables;
-@use "../../styles/mixins" as mixins;
-@use "../../styles/functions" as *;
+@use '../../styles/abstracts' as *;
 
 .about {
     display: flex;
@@ -18,11 +16,11 @@
         flex-direction: column;
 
         &-title {
-            @include mixins.text-styles(dynamic-size(48, 24), variables.$white-color, Tight);
+            @include text-styles(dynamic-size(48, 24), $white-color, Tight);
         }
 
         &-subtitle {
-            @include mixins.text-styles(dynamic-size(24, 16), variables.$secondary-color, Rubik);
+            @include text-styles(dynamic-size(24, 16), $secondary-color, Rubik);
         }
     }
 
@@ -32,11 +30,11 @@
         row-gap: rem(8);
 
         &-title {
-            @include mixins.text-styles(dynamic-size(24, 16), variables.$white-color, Tight);
+            @include text-styles(dynamic-size(24, 16), $white-color, Tight);
         }
 
-        &-text {
-            @include mixins.text-styles(dynamic-size(18, 14), variables.$white-color, Rubik);
+        &-description {
+            @include text-styles(dynamic-size(18, 14), $white-color, Rubik);
             text-align: justify;
         }
     }
@@ -47,6 +45,7 @@
 
         &-img {
             display: flex;
+            cursor: pointer;
             width: dynamic-size(240, 120);
             max-width: dynamic-size(240, 120);
             height: dynamic-size(240, 120);

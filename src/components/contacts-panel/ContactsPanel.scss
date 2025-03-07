@@ -1,6 +1,4 @@
-@use "../../styles/variables" as variables;
-@use "../../styles/mixins" as mixins;
-@use "../../styles/functions" as *;
+@use '../../styles/abstracts' as *;
 
 .contacts-panel {
     display: flex;
@@ -30,29 +28,28 @@
         &-icon {
             display: flex;
             align-items: center;
-            font-size: dynamic-size(16, 14);
+            @include text-styles(dynamic-size(16, 14), $white-color);
             transition: color 0.3s ease-in-out;
-            color: variables.$white-color;
         }
 
         &-time,
         &-text,
         &-link {
-            @include mixins.text-styles(dynamic-size(16, 14), variables.$white-color, Rubik);
             display: flex;
             column-gap: rem(8);
+            @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
             padding: rem(4);
         }
 
         &-link {
             text-decoration: underline;
-            text-decoration-color: variables.$secondary-color-transparent;
+            text-decoration-color: $secondary-color-transparent;
             text-underline-offset: rem(4);
             transition: color 0.3s ease-in-out, text-decoration-color 0.3s ease-in-out;
 
             &:hover {
-                color: variables.$secondary-color;
-                text-decoration-color: variables.$secondary-color;
+                color: $secondary-color;
+                text-decoration-color: $secondary-color;
             }
         }
     }
@@ -83,12 +80,11 @@
 }
 
 $social-colors: (
-    pdf: variables.$pdf-color,
-    email: variables.$email-color,
-    linkedin: variables.$linkedin-color,
-    telegram: variables.$telegram-color,
-    skype: variables.$skype-color,
-    github: variables.$github-color
+    pdf: $pdf-color,
+    email: $email-color,
+    linkedin: $linkedin-color,
+    telegram: $telegram-color,
+    github: $github-color
 );
 
 @each $name, $color in $social-colors {

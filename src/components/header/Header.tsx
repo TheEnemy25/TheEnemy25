@@ -13,11 +13,11 @@ const Header: React.FC = () => {
                 <nav className="header__menu">
                     <ul className="header__menu-list">
                         <li className="header__menu-item">
-                            <Link to="/movie/movies-list" className="header__menu-link">Stack</Link>
+                            <Link to="" className="header__menu-link">Stack</Link>
                         </li>
 
                         <li className="header__menu-item">
-                            <Link to="/cinema-theater/CinemaTheater" className="header__menu-link">Experience</Link>
+                            <Link to="" className="header__menu-link">Experience</Link>
                         </li>
                     </ul>
                 </nav>

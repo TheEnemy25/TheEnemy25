@@ -1,7 +1,7 @@
 import React from "react";
 import "./Anchor.scss";
-import useScrollspy from "../../hooks/anchor-menu/useScrollspy";
-import useSectionIds from "../../hooks/anchor-menu/useSectionIds";
+import useSectionIds from "../../hooks/anchor/useSectionIds";
+import useScrollspy from "../../hooks/anchor/useScrollspy";
 
 const Anchor: React.FC = () => {
     const sectionIds = useSectionIds();

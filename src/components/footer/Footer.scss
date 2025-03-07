@@ -1,6 +1,4 @@
-@use "../../styles/variables" as variables;
-@use "../../styles/mixins" as mixins;
-@use "../../styles/functions" as *;
+@use '../../styles/abstracts' as *;
 
 .footer {
     display: flex;
@@ -13,7 +11,7 @@
     max-width: rem(10);
 
     hr {
-        margin: 0 0 10px 0;
+        margin: 0 0 rem(10) 0;
         width: 100%;
     }
 }

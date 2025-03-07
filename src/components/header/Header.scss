@@ -1,6 +1,4 @@
-@use "../../styles/variables" as variables;
-@use "../../styles/mixins" as mixins;
-@use "../../styles/functions" as *;
+@use '../../styles/abstracts' as *;
 
 .header {
     max-width: rem(1920);
@@ -8,7 +6,7 @@
     padding: rem(4) rem(32);
     top: 0;
     left: 0;
-    background-color: variables.$black-color;
+    background-color: $black-color;
     position: sticky;
     display: flex;
     z-index: 1001;
@@ -18,7 +16,7 @@
     justify-content: space-between;
 
     &__logo {
-        @include mixins.text-styles(dynamic-size(56, 40), variables.$white-color, Pacifico);
+        @include text-styles(dynamic-size(56, 40), $white-color, Pacifico);
         transition: transform 0.3s ease;
         will-change: transform;
 
@@ -37,11 +35,11 @@
         &-item {}
 
         &-link {
-            @include mixins.text-styles(dynamic-size(16, 14), variables.$white-color, Rubik);
+            @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
             transition: color 0.3s;
 
             &:hover {
-                color: variables.$secondary-color;
+                color: $secondary-color;
             }
         }
     }
@@ -54,19 +52,19 @@
             display: flex;
 
             &-stick {
-                @include mixins.text-styles(dynamic-size(16, 14), variables.$white-color, Rubik);
+                @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
             }
 
             &-btn {
                 background: none;
                 border: none;
                 cursor: pointer;
-                @include mixins.text-styles(dynamic-size(16, 14), variables.$white-color, Tight);
+                @include text-styles(dynamic-size(16, 14), $white-color, Tight);
                 border-radius: rem(4);
                 transition: background-color 0.3s ease;
 
                 &:hover {
-                    color: variables.$secondary-color;
+                    color: $secondary-color;
                 }
             }
         }

@@ -1,6 +1,4 @@
-@use "../../styles/variables" as variables;
-@use "../../styles/mixins" as mixins;
-@use "../../styles/functions" as *;
+@use '../../styles/abstracts' as *;
 
 .anchor {
     display: flex;
@@ -23,20 +21,20 @@
 
         &-item {
             &>.active {
-                color: variables.$secondary-color;
-                border-left-color: variables.$secondary-color;
+                color: $secondary-color;
+                border-left-color: $secondary-color;
             }
         }
 
         &-link {
             display: flex;
-            @include mixins.text-styles(dynamic-size(16, 14), variables.$white-color, Rubik);
-            padding: rem(16) 0 rem(16) rem(16);
-            border-left: 2px solid;
+            @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
+            padding: rem(8) 0 rem(8) rem(16);
+            border-left: rem(2) solid $white-color;
             transition: color 0.3s ease, border-color 0.3s ease;
 
             &:hover {
-                color: variables.$secondary-color;
+                color: $secondary-color;
             }
         }
     }

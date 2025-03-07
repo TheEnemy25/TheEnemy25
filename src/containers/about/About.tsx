@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.scss";
 import photo from "/images/photo.png";
+import ImageModal from "../../components/modals/image-modal/ImageModal";
 
 const About: React.FC = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
 
     return (
         <>
@@ -15,7 +17,7 @@ const About: React.FC = () => {
 
                     <div className="about__info">
                         <h2 className="about__info-title">Summary</h2>
-                        <p className="about__info-text">Entry-level back-end developer with practical knowledge of C#, ASP.NET Core, EF
+                        <p className="about__info-description">Entry-level back-end developer with practical knowledge of C#, ASP.NET Core, EF
                             Core, MS SQL, and foundational front-end skills in HTML, CSS, React, Next.js, and
                             Tailwind. Passionate about building efficient and scalable solutions that meet modern
                             development standards. Committed to continuous professional growth and eager to
@@ -24,8 +26,17 @@ const About: React.FC = () => {
                 </article>
 
                 <figure className="about__photo">
-                    <img src={photo} alt="Photo of Andrian Kobryn .NET Developer" className="about__photo-img" />
+                    <img
+                        src={photo}
+                        alt="Photo of Andrian Kobryn .NET Developer"
+                        className="about__photo-img"
+                        onClick={() => setModalOpen(true)}
+                    />
                 </figure>
+
+                <ImageModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+                    <img src={photo} alt="Enlarged photo" className="image-modal__page--about" />
+                </ImageModal>
             </section>
         </>
     );

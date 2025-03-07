@@ -1,12 +1,12 @@
 import "./ContactsPanel.scss";
-import { useCurrentTime } from "../../hooks/useCurrentTime";
-import { ContactTypes } from "../../types/contactTypes";
-import { contactsData } from "../../data/contactsData";
+import { ContactWithIcon, getContactsData } from "../../types/contactsType";
+import { useCurrentTime } from "../../hooks/contacts-panel/useCurrentTime";
 
 const ContactsPanel = () => {
     const currentTime = useCurrentTime("Europe/Kyiv");
+    const contactsData = getContactsData();
 
-    const renderItem = (item: ContactTypes) => {
+    const renderItem = (item: ContactWithIcon) => {
         if (item.id === "time") {
             return (
                 <time className="contacts-panel__menu-time">
@@ -39,19 +39,17 @@ const ContactsPanel = () => {
     };
 
     return (
-        <>
-            <aside className="contacts-panel">
-                <nav className="contacts-panel__menu">
-                    <ul className="contacts-panel__menu-list">
-                        {contactsData.map((item, index) => (
-                            <li key={index} className="contacts-panel__menu-item" id={item.id || undefined}>
-                                {renderItem(item)}
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-            </aside>
-        </>
+        <aside className="contacts-panel">
+            <nav className="contacts-panel__menu">
+                <ul className="contacts-panel__menu-list">
+                    {contactsData.map((item) => (
+                        <li key={item.id} className="contacts-panel__menu-item" id={item.id}>
+                            {renderItem(item)}
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </aside>
     );
 };
 

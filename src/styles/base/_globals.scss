@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+
+* {
+    // outline: rem(2) solid green !important; //Uncomment if there was horizontal scrolling    
+}
+
+body {
+    // overflow-x: hidden; //With the right layout, this is not needed
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: -1000;
+}
+
+section {
+    scroll-margin-top: rem(96);
+}
+
+::-webkit-scrollbar {
+    width: rem(8);
+}
+
+::-webkit-scrollbar-track {
+    background-color: $black-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $secondary-color-transparent;
+    border-radius: rem(4);
+    transition: background-color 0.7s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #FF5F1F;
+}
