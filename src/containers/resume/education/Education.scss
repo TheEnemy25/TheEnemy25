@@ -1,0 +1,91 @@
+@use '../../../styles/abstracts' as *;
+
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16) 0;
+
+    &__header {
+        &-title {
+            @include text-styles($h2-size, $white-color, Tight);
+            padding: 0 0 0 rem(64);
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+        padding: 0 0 0 rem(64);
+        border-left: rem(2) solid $gray-color-transparent;
+        min-height: rem(96);
+        height: 100%;
+
+        &-inner {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+        }
+    }
+
+    &__photo {
+        position: absolute;
+        left: rem(-97);
+        top: rem(8);
+        z-index: 10;
+
+        &-link {
+            display: flex;
+            width: rem(64);
+            border-radius: 50%;
+            border: rem(2) solid $gray-color-transparent;
+            height: rem(60);
+            transition: border 0.2s ease;
+
+            &:hover {
+                border-color: $secondary-color;
+            }
+        }
+
+        &-img {
+            background-color: $white-color;
+            border-radius: inherit;
+            object-fit: contain;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+        padding: rem(16);
+        border: rem(2) solid $gray-color-900;
+        border-radius: rem(8);
+        transition: box-shadow 0.2s ease, border 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 rem(4) rem(8) 0 $gray-color-800;
+            border: rem(2) solid $gray-color-800;
+        }
+
+        &-title {
+            @include text-styles($h3-size, $white-color, Tight);
+        }
+
+        &-time {
+            @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
+        }
+
+        &-specialization {
+            padding: rem(8) 0;
+            @include text-styles($h4-size, $white-color, Rubik);
+            border-top: rem(2) solid $gray-color-800;
+        }
+
+        &-description {
+            @include text-styles($p-size, $white-color, Rubik);
+            word-break: break-all;
+        }
+    }
+}

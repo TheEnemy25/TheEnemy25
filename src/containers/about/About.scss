@@ -16,11 +16,11 @@
         flex-direction: column;
 
         &-title {
-            @include text-styles(dynamic-size(48, 24), $white-color, Tight);
+            @include text-styles($h1-size, $white-color, Tight);
         }
 
         &-subtitle {
-            @include text-styles(dynamic-size(24, 16), $secondary-color, Rubik);
+            @include text-styles($h2-size, $secondary-color, Rubik);
         }
     }
 
@@ -30,11 +30,11 @@
         row-gap: rem(8);
 
         &-title {
-            @include text-styles(dynamic-size(24, 16), $white-color, Tight);
+            @include text-styles($h2-size, $white-color, Tight);
         }
 
         &-description {
-            @include text-styles(dynamic-size(18, 14), $white-color, Rubik);
+            @include text-styles($p-size, $white-color, Rubik);
             text-align: justify;
         }
     }

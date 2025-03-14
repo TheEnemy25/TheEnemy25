@@ -29,7 +29,7 @@
             display: flex;
             align-items: center;
             @include text-styles(dynamic-size(16, 14), $white-color);
-            transition: color 0.3s ease-in-out;
+            transition: color 0.2s ease;
         }
 
         &-time,
@@ -45,7 +45,7 @@
             text-decoration: underline;
             text-decoration-color: $secondary-color-transparent;
             text-underline-offset: rem(4);
-            transition: color 0.3s ease-in-out, text-decoration-color 0.3s ease-in-out;
+            transition: color 0.2s ease, text-decoration-color 0.2s ease;
 
             &:hover {
                 color: $secondary-color;
@@ -55,26 +55,26 @@
     }
 
     #resume {
-        animation: pulse--pdf 10s infinite;
+        animation: pulse--pdf 8s infinite;
         border-radius: rem(8);
     }
 
     @keyframes pulse--pdf {
 
         0% {
-            box-shadow: 0 0 0 0 rgba(200, 200, 200, 0);
+            box-shadow: 0 0 0 0 $black-color-transparent;
         }
 
         10% {
-            box-shadow: 0 0 0 rem(4) rgba(200, 200, 200, 0.7);
+            box-shadow: 0 0 rem(16) 0 $gray-color-transparent;
         }
 
-        30% {
-            box-shadow: 0 0 0 0 rgba(200, 200, 200, 0);
+        50% {
+            box-shadow: 0 0 0 0 $black-color-transparent;
         }
 
         100% {
-            box-shadow: 0 0 0 0 rgba(200, 200, 200, 0);
+            box-shadow: 0 0 0 0 $black-color-transparent;
         }
     }
 }
@@ -90,8 +90,8 @@ $social-colors: (
 @each $name, $color in $social-colors {
     .contacts-panel__menu-item:hover .contacts-panel__menu-icon--#{$name} {
         color: $color;
-        transform: scale(1.2);
+        transform: scale(1.1);
         will-change: transform;
-        transition: transform 0.5s ease;
+        transition: transform 0.2s ease;
     }
 }

@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+
+// This allows easy color control for SVGs without modifying the SVG file itself.  
+.reset-svg :where([fill]) {
+    fill: inherit;
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}

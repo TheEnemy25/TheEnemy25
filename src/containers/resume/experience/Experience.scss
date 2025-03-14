@@ -1,0 +1,21 @@
+@use '../../../styles/abstracts' as *;
+
+.experience {
+
+    display: flex;
+    flex-direction: column;
+    margin: rem(64) 0 0;
+    // color: white;
+
+
+    .biography__summary {
+        &-header {
+            @include text-styles(rem(48), $white-color, Tight);
+        }
+
+        &-subtitle {
+            @include text-styles(rem(16), $white-color, Rubik);
+        }
+    }
+
+}

@@ -23,11 +23,11 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: $secondary-color-transparent;
+    background-color: $gray-color-900;
     border-radius: rem(4);
-    transition: background-color 0.7s ease;
+    transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #FF5F1F;
+    background-color: $gray-color-800;
 }

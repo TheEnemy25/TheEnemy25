@@ -1,27 +1,17 @@
 import React from "react";
 
 type IconProps = {
-    width?: string;
-    height?: string;
-    fill?: string;
     className?: string;
 };
 
 const CssIcon: React.FC<IconProps> = ({
-    width = "40px",
-    height = "40px",
-    fill = "",
     className = "",
 }) => {
     return (
         <svg
-            width={width}
-            height={height}
-            fill={fill}
             className={className}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 48 48"
-
         >
             <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
             <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />

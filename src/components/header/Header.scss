@@ -17,7 +17,7 @@
 
     &__logo {
         @include text-styles(dynamic-size(56, 40), $white-color, Pacifico);
-        transition: transform 0.3s ease;
+        transition: transform 0.2s ease;
         will-change: transform;
 
         &:hover {
@@ -36,7 +36,7 @@
 
         &-link {
             @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
-            transition: color 0.3s;
+            transition: color 0.2s ease;
 
             &:hover {
                 color: $secondary-color;
@@ -61,7 +61,7 @@
                 cursor: pointer;
                 @include text-styles(dynamic-size(16, 14), $white-color, Tight);
                 border-radius: rem(4);
-                transition: background-color 0.3s ease;
+                transition: background-color 0.2s ease;
 
                 &:hover {
                     color: $secondary-color;

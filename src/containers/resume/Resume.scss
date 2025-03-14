@@ -1,0 +1,44 @@
+@use '../../styles/abstracts' as *;
+
+.resume {
+    width: 100%;
+    margin: 0 auto;
+
+    &__tab {
+        display: flex;
+    }
+
+    &__tab-list {
+        display: flex;
+        width: 100%;
+    }
+
+    &__tab-item {
+        flex: 1;
+    }
+
+    &__tab-button {
+        width: 100%;
+        padding: rem(8) rem(16);
+        border: none;
+        background: transparent;
+        @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
+        border-bottom: rem(2) solid $gray-color-900;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $secondary-color;
+        }
+
+        &--active {
+            color: $secondary-color;
+            border-bottom: rem(2) solid $secondary-color;
+        }
+    }
+
+    &__content {
+        padding: rem(48) rem(48) rem(0) rem(48);
+        background-color: transparent;
+        border-radius: rem(8);
+    }
+}

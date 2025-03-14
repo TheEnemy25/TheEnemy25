@@ -1,21 +1,10 @@
-$primary-color: #00BFFF;
-$secondary-color: #FF6600;
+@use './functions' as *;
 
-$white-color: white;
-$black-color: black;
-
-// social media icons
-$pdf-color: #B30B00;
-$email-color: #C5221F;
-
-$github-color: #6F42C1;
-
-$linkedin-color: #007FBC;
-$telegram-color: #3390EC;
-
-//transparent colors
-$primary-color-transparent: rgba(0, 191, 255, 0.7);
-$secondary-color-transparent: rgba(255, 95, 31, 0.7);
-
-$black-color-transparent: rgba(0, 0, 0, 0.8);
-$gray-color-transparent: rgba(200, 200, 200, 0.5);
+// ======== FONTS SIZE ========
+$h1-size: dynamic-size(40, 28);
+$h2-size: dynamic-size(30, 22);
+$h3-size: dynamic-size(26, 20);
+$h4-size: dynamic-size(22, 18);
+$h5-size: dynamic-size(20, 16);
+$h6-size: dynamic-size(18, 14);
+$p-size: dynamic-size(16, 14);

@@ -1,43 +1,20 @@
 import React from "react";
 
 type IconProps = {
-    width?: string;
-    height?: string;
-    fill?: string;
     className?: string;
 };
 
 const CsharpIcon: React.FC<IconProps> = ({
-    width = "40px",
-    height = "40px",
-    fill = "",
     className = "",
 }) => {
     return (
         <svg
-            width={width}
-            height={height}
-            fill={fill}
             className={className}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0,0,256,256"
-            fill-rule="evenodd"
+            fillRule="evenodd"
         >
-            <g
-                fill="none"
-                fill-rule="evenodd"
-                stroke="none"
-                stroke-width="1"
-                stroke-linecap="butt"
-                stroke-linejoin="miter"
-                stroke-miterlimit="10"
-                stroke-dasharray=""
-                stroke-dashoffset="0"
-                font-family="none"
-                font-weight="none"
-                font-size="none"
-                text-anchor="none"
-            >
+            <g>
                 <g transform="scale(5.33333,5.33333)">
                     <path
                         d="M22.903,3.286c0.679,-0.381 1.515,-0.381 2.193,0c3.355,1.883 13.451,7.551 16.807,9.434c0.679,0.38 1.097,1.084 1.097,1.846c0,3.766 0,15.101 0,18.867c0,0.762 -0.418,1.466 -1.097,1.847c-3.355,1.883 -13.451,7.551 -16.807,9.434c-0.679,0.381 -1.515,0.381 -2.193,0c-3.355,-1.883 -13.451,-7.551 -16.807,-9.434c-0.678,-0.381 -1.096,-1.084 -1.096,-1.846c0,-3.766 0,-15.101 0,-18.867c0,-0.762 0.418,-1.466 1.097,-1.847c3.354,-1.883 13.452,-7.551 16.806,-9.434z"

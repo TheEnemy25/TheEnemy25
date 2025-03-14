@@ -4,9 +4,11 @@ const Experience: React.FC = () => {
 
     return (
         <>
-            <section className="experience">
+            <article className="experience">
+                <h2>Experience</h2>
 
-            </section>
+
+            </article>
         </>
     );
 };

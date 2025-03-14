@@ -1,11 +1,13 @@
 import About from '../containers/about/About';
-import Experience from '../containers/experience/Experience';
+import Resume from '../containers/resume/Resume';
+import Stack from '../containers/stack/Stack';
 
 const Main: React.FC = () => {
     return (
         <>
             <About />
-            <Experience />
+            <Resume />
+            <Stack />
         </>
     );
 };
