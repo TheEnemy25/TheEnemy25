@@ -6,21 +6,31 @@ const Header: React.FC = () => {
     return (
         <>
             <header className="header">
-                <Link to="/" className='header__logo'>
-                    Portfolio
-                </Link>
+                <div className='header__container'>
+                    <Link to="/" className='header__logo'>
+                        Portfolio
+                    </Link>
 
-                <nav className="header__menu">
-                    <ul className="header__menu-list">
-                        <li className="header__menu-item">
-                            <Link to="" className="header__menu-link">Stack</Link>
-                        </li>
+                    <nav className="header__menu">
+                        <ul className="header__menu-list">
+                            <li className="header__menu-item">
+                                <Link to="" className="header__menu-link">Home</Link>
+                            </li>
 
-                        <li className="header__menu-item">
-                            <Link to="" className="header__menu-link">Experience</Link>
-                        </li>
-                    </ul>
-                </nav>
+                            <li className="header__menu-item">
+                                <Link to="" className="header__menu-link">Stack</Link>
+                            </li>
+
+                            <li className="header__menu-item">
+                                <Link to="" className="header__menu-link">Experience</Link>
+                            </li>
+
+                            <li className="header__menu-item">
+                                <Link to="" className="header__menu-link">Education</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
                 <div className="header__controls">
                     <div className="header__language-switch">

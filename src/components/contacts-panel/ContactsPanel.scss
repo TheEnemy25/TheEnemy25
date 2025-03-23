@@ -28,7 +28,7 @@
         &-icon {
             display: flex;
             align-items: center;
-            @include text-styles(dynamic-size(16, 14), $white-color);
+            @include text-styles($p-size, $white-color);
             transition: color 0.2s ease;
         }
 
@@ -37,7 +37,7 @@
         &-link {
             display: flex;
             column-gap: rem(8);
-            @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
+            @include text-styles($p-size, $white-color, Rubik);
             padding: rem(4);
         }
 
@@ -78,14 +78,6 @@
         }
     }
 }
-
-$social-colors: (
-    pdf: $pdf-color,
-    email: $email-color,
-    linkedin: $linkedin-color,
-    telegram: $telegram-color,
-    github: $github-color
-);
 
 @each $name, $color in $social-colors {
     .contacts-panel__menu-item:hover .contacts-panel__menu-icon--#{$name} {

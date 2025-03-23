@@ -1,9 +1,17 @@
+import Certificates from "./certificates/Certificates";
+import Education from "./education/Education";
+import Experience from "./experience/Experience";
 import "./Resume.scss";
 import { useState } from "react";
-import { tabsData } from "../../data/tabsData";
 
 const Resume: React.FC = () => {
     const [activeTab, setActiveTab] = useState("experience");
+
+    const tabsData = [
+        { id: "experience", label: "Experience", component: <Experience /> },
+        { id: "education", label: "Education", component: <Education /> },
+        { id: "certificates", label: "Certificates", component: <Certificates /> },
+    ];
 
     const activeTabComponent = tabsData.find((tab) => tab.id === activeTab)?.component;
 

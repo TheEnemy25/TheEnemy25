@@ -1,4 +1,5 @@
 @use './functions' as *;
+@use './colors' as *;
 
 // ======== FONTS SIZE ========
 $h1-size: dynamic-size(40, 28);
@@ -8,3 +9,12 @@ $h4-size: dynamic-size(22, 18);
 $h5-size: dynamic-size(20, 16);
 $h6-size: dynamic-size(18, 14);
 $p-size: dynamic-size(16, 14);
+
+// ======== SOCIAL COLORS ========
+$social-colors: (
+    pdf: $pdf-color,
+    email: $email-color,
+    linkedin: $linkedin-color,
+    telegram: $telegram-color,
+    github: $github-color
+);

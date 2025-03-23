@@ -22,7 +22,7 @@
         padding: rem(8) rem(16);
         border: none;
         background: transparent;
-        @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
+        @include text-styles($p-size, $white-color, Rubik);
         border-bottom: rem(2) solid $gray-color-900;
         transition: color 0.2s ease;
 

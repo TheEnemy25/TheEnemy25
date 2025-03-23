@@ -20,7 +20,7 @@
         }
 
         &-item {
-            &>.active {
+            &>.anchor__menu-link--active {
                 color: $secondary-color;
                 border-left-color: $secondary-color;
             }
@@ -28,7 +28,7 @@
 
         &-link {
             display: flex;
-            @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
+            @include text-styles($p-size, $white-color, Rubik);
             padding: rem(8) 0 rem(8) rem(16);
             border-left: rem(2) solid $gray-color-900;
             transition: color 0.2s ease, border-color 0.2s ease;

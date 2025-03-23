@@ -15,6 +15,13 @@
     align-items: center;
     justify-content: space-between;
 
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: dynamic-size(80, 16);
+    }
+
     &__logo {
         @include text-styles(dynamic-size(56, 40), $white-color, Pacifico);
         transition: transform 0.2s ease;
@@ -35,7 +42,7 @@
         &-item {}
 
         &-link {
-            @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
+            @include text-styles($p-size, $white-color, Rubik);
             transition: color 0.2s ease;
 
             &:hover {
@@ -52,14 +59,14 @@
             display: flex;
 
             &-stick {
-                @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
+                @include text-styles($p-size, $white-color, Rubik);
             }
 
             &-btn {
                 background: none;
                 border: none;
                 cursor: pointer;
-                @include text-styles(dynamic-size(16, 14), $white-color, Tight);
+                @include text-styles($p-size, $white-color, Tight);
                 border-radius: rem(4);
                 transition: background-color 0.2s ease;
 

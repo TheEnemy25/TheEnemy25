@@ -40,28 +40,30 @@ const About: React.FC = () => {
     );
 
     return (
-        <section id="about" className="about">
-            {windowWidth >= 1024 ? (
-                <>
+        <>
+            <section id="about" className="about">
+                {windowWidth >= 1024 ? (
+                    <>
+                        <div className="about__container">
+                            <Header />
+                            <Info />
+                        </div>
+                        <Photo />
+                    </>
+                ) : (
                     <div className="about__container">
-                        <Header />
+                        <div className="about__inner">
+                            <Header />
+                            <Photo />
+                        </div>
                         <Info />
                     </div>
-                    <Photo />
-                </>
-            ) : (
-                <div className="about__container">
-                    <div className="about__inner">
-                        <Header />
-                        <Photo />
-                    </div>
-                    <Info />
-                </div>
-            )}
-            <ImageModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-                <img src={photo} alt="Enlarged photo" className="image-modal__page--about" />
-            </ImageModal>
-        </section>
+                )}
+                <ImageModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+                    <img src={photo} alt="Enlarged photo" className="image-modal__page--about" />
+                </ImageModal>
+            </section>
+        </>
     );
 };
 

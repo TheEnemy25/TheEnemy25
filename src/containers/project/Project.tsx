@@ -17,7 +17,7 @@ const ProjectContent: React.FC<{ projectId: string }> = ({ projectId }) => {
             <div className="project__repository">
                 {lastCommitDate && (
                     <div className="project__repository-commit">
-                        <p className="project__repository-text">Last updated:</p>
+                        <p className="project__repository-text">Last updated: &nbsp;</p>
                         <time className="project__repository-time">{lastCommitDate}</time>
                     </div>
                 )}
@@ -53,16 +53,18 @@ const ProjectContent: React.FC<{ projectId: string }> = ({ projectId }) => {
 
 const Project: React.FC = () => {
     return (
-        <section id="project" className="project">
-            <header className="project__header">
-                <h2 className="project__header-title">All project</h2>
-            </header>
-            <div className="project__grid">
-                {projectData.map((project) => (
-                    <ProjectContent key={project.id} projectId={project.id} />
-                ))}
-            </div>
-        </section>
+        <>
+            <section id="project" className="project">
+                <header className="project__header">
+                    <h2 className="project__header-title">All project</h2>
+                </header>
+                <div className="project__grid">
+                    {projectData.map((project) => (
+                        <ProjectContent key={project.id} projectId={project.id} />
+                    ))}
+                </div>
+            </section>
+        </>
     );
 };
 

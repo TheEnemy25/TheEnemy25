@@ -74,7 +74,7 @@
         }
 
         &-time {
-            @include text-styles(dynamic-size(16, 14), $white-color, Rubik);
+            @include text-styles($p-size, $white-color, Rubik);
         }
 
         &-specialization {

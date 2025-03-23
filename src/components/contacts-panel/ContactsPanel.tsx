@@ -39,17 +39,19 @@ const ContactsPanel = () => {
     };
 
     return (
-        <aside className="contacts-panel">
-            <nav className="contacts-panel__menu">
-                <ul className="contacts-panel__menu-list">
-                    {contactsData.map((item) => (
-                        <li key={item.id} className="contacts-panel__menu-item" id={item.id}>
-                            {renderItem(item)}
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        </aside>
+        <>
+            <aside className="contacts-panel">
+                <nav className="contacts-panel__menu">
+                    <ul className="contacts-panel__menu-list">
+                        {contactsData.map((item) => (
+                            <li key={item.id} className="contacts-panel__menu-item" id={item.id}>
+                                {renderItem(item)}
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </aside>
+        </>
     );
 };
 

@@ -8,22 +8,24 @@ const Anchor: React.FC = () => {
     const activeSection = useScrollspy(sectionIds);
 
     return (
-        <aside className="anchor">
-            <nav className="anchor__menu">
-                <ul className="anchor__menu-list">
-                    {sectionIds.map((id) => (
-                        <li key={id} className="anchor__menu-item">
-                            <a
-                                href={`#${id}`}
-                                className={`anchor__menu-link ${activeSection === id ? "active" : ""}`}
-                            >
-                                {id.charAt(0).toUpperCase() + id.slice(1)}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        </aside>
+        <>
+            <aside className="anchor">
+                <nav className="anchor__menu">
+                    <ul className="anchor__menu-list">
+                        {sectionIds.map((id) => (
+                            <li key={id} className="anchor__menu-item">
+                                <a
+                                    href={`#${id}`}
+                                    className={`anchor__menu-link ${activeSection === id ? "anchor__menu-link--active" : ""}`}
+                                >
+                                    {id.charAt(0).toUpperCase() + id.slice(1)}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </aside>
+        </>
     );
 };
 
