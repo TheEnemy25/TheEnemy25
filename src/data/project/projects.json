@@ -1,0 +1,38 @@
+[
+    {
+      "id": "k-spot",
+      "title": "K-spot (front-end)",
+      "description": "Initially, a user interface was developed using React and SCSS. Later redesigned the project to Next.js to improve performance and include the server side rendering.",
+      "photo": "/images/movie-page.jpg",
+      "technologies": [
+        "Scss",
+        "Tailwind CSS",
+        "React",
+        "TypeScript",
+        "Next.js"
+      ],
+      "repository": {
+        "repositoryLink": "https://github.com/TheEnemy25/k-spot"
+      }
+    },
+    {
+        "id": "Cinema",
+        "title": "K-spot (back-end)",
+        "description": "Implemented authentication and authorization using IdentityServer4, data management with Entity Framework Core, and MS SQL as the database. Utilized AutoMapper for object mapping, FluentValidation for input validation, and MediatR to implement the CQRS pattern.",
+        "photo": "/images/movie-page.jpg",
+        "technologies": [
+          "Csharp",
+          "Entity Framework Core",
+          "MS SQL",
+          "ASP.NET Core Web API",
+          "AutoMapper",
+          "FluentValidation",
+          "MediatR",
+          "IdentityServer4"
+        ],
+        "repository": {
+          "repositoryLink": "https://github.com/TheEnemy25/Cinema/tree/master"
+        }
+      }
+  ]
+  

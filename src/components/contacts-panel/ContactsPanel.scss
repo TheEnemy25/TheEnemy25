@@ -95,3 +95,9 @@ $social-colors: (
         transition: transform 0.2s ease;
     }
 }
+
+@media (max-width: rem(768)) {
+    .contacts-panel {
+        display: none;
+    }
+}

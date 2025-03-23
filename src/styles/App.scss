@@ -20,7 +20,7 @@
     display: flex; //necessarily if there is a display grid then the main container begins to stretch
     flex-direction: column;
     max-width: rem(1280);
-    margin: 0 auto;
+    margin: 0 auto rem(64);
     flex: 1 1 auto;
     gap: rem(144) 0;
     grid-area: main;

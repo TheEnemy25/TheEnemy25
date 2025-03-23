@@ -5,7 +5,6 @@ const Footer = () => {
     return (
         <>
             <footer className="footer">
-                <hr className="" />
                 Footer
             </footer>
         </>

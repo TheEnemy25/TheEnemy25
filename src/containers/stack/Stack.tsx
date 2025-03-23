@@ -4,7 +4,6 @@ import stackData from "../../data/stack/stack.json";
 import { iconsMap } from "../../assets/svgs/skill/index";
 import { StackData, StackItem } from "../../types/stackTypes";
 
-
 const Stack: React.FC = () => {
     const data = stackData as StackData;
 

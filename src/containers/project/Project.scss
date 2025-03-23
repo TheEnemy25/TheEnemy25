@@ -1,0 +1,142 @@
+@use '../../styles/abstracts' as *;
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+
+    &__header {
+        display: flex;
+
+        &-title {
+            @include text-styles($h2-size, $white-color, Tight);
+            word-spacing: rem(8);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
+        gap: rem(16);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+        border: rem(2) solid $gray-color-900;
+        border-radius: rem(8);
+        padding: rem(16);
+        transition: box-shadow 0.2s ease, border 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 rem(4) rem(8) 0 $gray-color-800;
+            border: rem(2) solid $gray-color-800;
+        }
+
+        &-photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-img {
+                display: flex;
+                object-fit: cover;
+                width: 100%;
+                height: rem(240);
+                border-radius: rem(8);
+            }
+        }
+
+        &-title {
+            @include text-styles($h3-size, $white-color, Rubik);
+        }
+
+        &-description {
+            @include text-styles(rem(16), $white-color, Rubik);
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: rem(8);
+
+            &-item {
+                display: flex;
+                max-width: 100%;
+            }
+
+            &-label {
+                padding: rem(4);
+                background: $gray-color-900;
+                @include text-styles(rem(12), $white-color, Rubik);
+                border: rem(2) solid $gray-color-800;
+                border-radius: rem(8);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                transition: border 0.2s ease;
+
+                &:hover {
+                    border-color: $gray-color-transparent;
+                }
+            }
+        }
+    }
+
+    &__repository {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-commit {
+            display: flex;
+            align-items: center
+        }
+
+        &-text {
+            @include text-styles($p-size, $white-color, Rubik);
+        }
+
+        &-time {
+            @include text-styles($p-size, $white-color, Rubik);
+        }
+
+        &-list {
+            display: flex;
+
+            &-item {}
+
+            &-link {
+                display: flex;
+                align-items: center;
+                gap: rem(4);
+                padding: rem(4);
+                @include text-styles(rem(10), $black-color, Rubik);
+                background: $white-color;
+                border-radius: rem(8);
+                border: rem(2) solid transparent;
+                transition: border 0.2s ease;
+
+                &:hover {
+                    border: rem(2) solid $secondary-color;
+                }
+            }
+
+            &-icon {
+                fill: $black-color;
+                width: rem(16);
+                height: rem(16);
+            }
+
+            &-label {
+                word-break: break-all;
+            }
+        }
+    }
+}

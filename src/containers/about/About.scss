@@ -3,12 +3,17 @@
 .about {
     display: flex;
     width: 100%;
-    gap: dynamic-size(48, 16);
+    gap: rem(32);
 
     &__container {
         display: flex;
         flex-direction: column;
         gap: rem(24);
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
     }
 
     &__header {
@@ -42,6 +47,7 @@
     &__photo {
         display: flex;
         align-items: flex-start;
+        justify-content: center;
 
         &-img {
             display: flex;
@@ -52,5 +58,20 @@
             border-radius: 50%;
             object-fit: cover;
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about__inner {
+        display: flex;
+        justify-content: space-evenly;
+        gap: rem(16);
+    }
+
+    .about__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: rem(16);
     }
 }
