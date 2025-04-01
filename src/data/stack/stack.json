@@ -4,19 +4,19 @@
             "id": "csharp",
             "text": "Csharp",
             "icon": "CsharpIcon",
-            "link": "/"
+            "link": "https://dotnet.microsoft.com/"
         },
         {
             "id": "dotnet",
             "text": ".Net Core",
             "icon": "DotNetCoreIcon",
-            "link": "/"
+            "link": "https://dotnet.microsoft.com/en-us/apps/aspnet"
         },
         {
             "id": "mssql",
             "text": "Microsoft SQL",
             "icon": "MicrosoftSqlWhiteIcon",
-            "link": "/"
+            "link": "https://www.microsoft.com/en-us/sql-server"
         }
     ],
     "Front-end": [
@@ -24,37 +24,37 @@
             "id": "html",
             "text": "Html",
             "icon": "HtmlIcon",
-            "link": "/"
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
         },
         {
             "id": "css",
             "text": "Css",
             "icon": "CssIcon",
-            "link": "/"
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "id": "sass",
             "text": "Sass",
             "icon": "SassIcon",
-            "link": "/"
+            "link": "https://sass-lang.com/"
         },
         {
             "id": "react",
             "text": "React",
             "icon": "ReactIcon",
-            "link": "/"
+            "link": "https://react.dev/"
         },
         {
             "id": "tailwind",
             "text": "Tailwind CSS",
             "icon": "TailwindСssIcon",
-            "link": "/"
+            "link": "https://tailwindcss.com/"
         },
         {
             "id": "nextjs",
             "text": "Next.js",
             "icon": "NextjsIcon",
-            "link": "/"
+            "link": "https://nextjs.org/"
         }
     ],
     "Other": [
@@ -62,7 +62,7 @@
             "id": "github",
             "text": "GitHub",
             "icon": "GitHubIcon",
-            "link": "/"
+            "link": "https://github.com/"
         }
     ]
 }

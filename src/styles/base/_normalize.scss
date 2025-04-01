@@ -118,6 +118,7 @@ textarea,
 select,
 button {
     font: inherit;
+    padding: 0;
 }
 
 button,
@@ -161,6 +162,11 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+hr {
+    margin: 0;
+    border: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

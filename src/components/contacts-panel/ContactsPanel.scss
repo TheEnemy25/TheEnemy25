@@ -12,6 +12,10 @@
     min-width: max-content;
     grid-area: contacts-panel;
 
+    @include mobile {
+        display: none;
+    }
+
     &__menu {
 
         &-list {
@@ -23,6 +27,17 @@
         &-item {
             display: flex;
             max-width: max-content;
+
+            @include hover {
+                @each $name, $color in $social-colors {
+                    .contacts-panel__menu-icon--#{$name} {
+                        color: $color;
+                        transform: scale(1.1);
+                        will-change: transform;
+                        transition: transform 0.2s ease;
+                    }
+                }
+            }
         }
 
         &-icon {
@@ -47,7 +62,7 @@
             text-underline-offset: rem(4);
             transition: color 0.2s ease, text-decoration-color 0.2s ease;
 
-            &:hover {
+            @include hover {
                 color: $secondary-color;
                 text-decoration-color: $secondary-color;
             }
@@ -76,20 +91,5 @@
         100% {
             box-shadow: 0 0 0 0 $black-color-transparent;
         }
-    }
-}
-
-@each $name, $color in $social-colors {
-    .contacts-panel__menu-item:hover .contacts-panel__menu-icon--#{$name} {
-        color: $color;
-        transform: scale(1.1);
-        will-change: transform;
-        transition: transform 0.2s ease;
-    }
-}
-
-@media (max-width: rem(768)) {
-    .contacts-panel {
-        display: none;
     }
 }

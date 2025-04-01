@@ -8,49 +8,60 @@
     &__header {
         &-title {
             @include text-styles($h2-size, $white-color, Tight);
-            padding: 0 0 0 rem(64);
         }
     }
 
     &__container {
         display: flex;
-        flex-direction: column;
-        gap: rem(16);
-        padding: 0 0 0 rem(64);
-        border-left: rem(2) solid $gray-color-transparent;
-        min-height: rem(96);
-        height: 100%;
+        padding: 0 0 0 rem(32);
+        flex-direction: row;
 
-        &-inner {
-            display: flex;
-            align-items: flex-start;
-            position: relative;
+        &-hr {
+            width: rem(2);
+            background-color: $gray-color-transparent;
+            border-radius: rem(8);
         }
     }
 
-    &__photo {
-        position: absolute;
-        left: rem(-97);
-        top: rem(8);
-        z-index: 10;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+        width: 100%;
 
-        &-link {
+        &-item {
             display: flex;
-            width: rem(64);
-            border-radius: 50%;
-            border: rem(2) solid $gray-color-transparent;
-            height: rem(60);
-            transition: border 0.2s ease;
-
-            &:hover {
-                border-color: $secondary-color;
-            }
+            align-items: flex-start;
+            position: relative;
+            padding: 0 0 0 rem(64);
+            min-height: rem(96);
+            flex-direction: column;
         }
 
-        &-img {
-            background-color: $white-color;
-            border-radius: inherit;
-            object-fit: contain;
+        &-photo {
+            position: absolute;
+            left: rem(-32);
+            top: rem(8);
+            z-index: 10;
+
+            &-link {
+                display: flex;
+                width: rem(64);
+                border-radius: 50%;
+                border: rem(1) solid $gray-color-transparent;
+                height: rem(60);
+                transition: border 0.2s ease;
+
+                @include hover {
+                    border-color: $secondary-color;
+                }
+            }
+
+            &-img {
+                background-color: $white-color;
+                border-radius: inherit;
+                object-fit: contain;
+            }
         }
     }
 
@@ -60,13 +71,13 @@
         flex-direction: column;
         gap: rem(8);
         padding: rem(16);
-        border: rem(2) solid $gray-color-900;
+        border: rem(1) solid $gray-color-900;
         border-radius: rem(8);
         transition: box-shadow 0.2s ease, border 0.2s ease;
 
-        &:hover {
+        @include hover {
             box-shadow: 0 rem(4) rem(8) 0 $gray-color-800;
-            border: rem(2) solid $gray-color-800;
+            border: rem(1) solid $gray-color-800;
         }
 
         &-title {
@@ -80,12 +91,11 @@
         &-specialization {
             padding: rem(8) 0;
             @include text-styles($h4-size, $white-color, Rubik);
-            border-top: rem(2) solid $gray-color-800;
+            border-top: rem(1) solid $gray-color-800;
         }
 
         &-description {
             @include text-styles($p-size, $white-color, Rubik);
-            word-break: break-all;
         }
     }
 }

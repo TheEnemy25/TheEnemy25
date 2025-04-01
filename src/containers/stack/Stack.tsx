@@ -1,5 +1,4 @@
 import "./Stack.scss";
-import { Link } from "react-router-dom";
 import stackData from "../../data/stack/stack.json";
 import { iconsMap } from "../../assets/svgs/skill/index";
 import { StackData, StackItem } from "../../types/stackTypes";
@@ -27,10 +26,10 @@ const Stack: React.FC = () => {
 
                                     return (
                                         <li className="stack__list-item" key={item.id}>
-                                            <Link to={item.link} className="stack__list-link">
+                                            <a href={item.link} className="stack__list-link" target="_blank" rel="noopener noreferrer">
                                                 <Icon className="stack__list-icon" />
                                                 <span className="stack__list-label">{item.text}</span>
-                                            </Link>
+                                            </a>
                                         </li>
                                     );
                                 })}

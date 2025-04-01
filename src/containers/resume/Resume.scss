@@ -23,21 +23,21 @@
         border: none;
         background: transparent;
         @include text-styles($p-size, $white-color, Rubik);
-        border-bottom: rem(2) solid $gray-color-900;
+        border-bottom: rem(1) solid $gray-color-900;
         transition: color 0.2s ease;
 
-        &:hover {
+        @include hover {
             color: $secondary-color;
         }
 
         &--active {
             color: $secondary-color;
-            border-bottom: rem(2) solid $secondary-color;
+            border-bottom: rem(1) solid $secondary-color;
         }
     }
 
     &__content {
-        padding: rem(48) rem(0) rem(0) rem(48);
+        padding: rem(48) rem(0) rem(0) rem(0);
         background-color: transparent;
         border-radius: rem(8);
     }

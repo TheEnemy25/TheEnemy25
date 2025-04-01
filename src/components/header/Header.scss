@@ -14,38 +14,69 @@
     grid-area: header;
     align-items: center;
     justify-content: space-between;
+    gap: dynamic-size(80, 16);
+
+    &__logo {
+        @include text-styles(dynamic-size(56, 40), $white-color, Pacifico);
+        will-change: transform;
+        transition: transform 0.2s ease;
+
+        @include hover {
+            transform: scale(1.1);
+        }
+    }
 
     &__container {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: dynamic-size(80, 16);
-    }
+        justify-content: space-between;
+        width: 100%;
 
-    &__logo {
-        @include text-styles(dynamic-size(56, 40), $white-color, Pacifico);
-        transition: transform 0.2s ease;
-        will-change: transform;
+        @include mobile {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: rem(32);
+            height: 100%;
+            opacity: 1;
+            background-color: $black-color;
+            transform: translateX(100%);
+            overflow-y: auto;
+            padding: rem(24) rem(0) rem(24) rem(0);
 
-        &:hover {
-            transform: scale(1.1);
+            &.is-active {
+                transform: translateX(0);
+            }
         }
     }
 
     &__menu {
 
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+        }
+
         &-list {
             display: flex;
             gap: rem(24);
-        }
 
-        &-item {}
+            @include mobile {
+                flex-direction: column;
+                gap: rem(16);
+            }
+        }
 
         &-link {
             @include text-styles($p-size, $white-color, Rubik);
             transition: color 0.2s ease;
 
-            &:hover {
+            @include hover {
                 color: $secondary-color;
             }
         }
@@ -55,25 +86,55 @@
         display: flex;
         gap: rem(8);
 
+        @include mobile {}
+
         .header__language-switch {
             display: flex;
+            gap: rem(4);
+
+            @include mobile {
+                display: flex;
+                align-items: center;
+            }
 
             &-stick {
                 @include text-styles($p-size, $white-color, Rubik);
             }
 
             &-btn {
+                padding: 0;
                 background: none;
                 border: none;
-                cursor: pointer;
-                @include text-styles($p-size, $white-color, Tight);
-                border-radius: rem(4);
-                transition: background-color 0.2s ease;
+            }
 
-                &:hover {
-                    color: $secondary-color;
+            &-icon {
+                display: flex;
+                width: rem(32);
+                mix-blend-mode: luminosity;
+                opacity: 0.7;
+                filter: grayscale(100%) contrast(80%) brightness(80%);
+                transition: opacity 0.2s ease, transform 0.2s ease;
+
+                @include hover {
+                    mix-blend-mode: normal;
+                    filter: none;
+                    opacity: 1;
+                    transform: scale(1.1);
                 }
             }
+        }
+    }
+
+    &__burger-button {
+        display: none;
+        background: none;
+        border: none;
+        color: $white-color;
+
+        @include mobile {
+            display: flex;
+            position: relative;
+            z-index: 1002;
         }
     }
 }

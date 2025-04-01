@@ -12,6 +12,10 @@
     min-width: max-content;
     grid-area: anchor;
 
+    @include tablet {
+        display: none;
+    }
+
     &__menu {
 
         &-list {
@@ -33,15 +37,9 @@
             border-left: rem(2) solid $gray-color-900;
             transition: color 0.2s ease, border-color 0.2s ease;
 
-            &:hover {
+            @include hover {
                 color: $secondary-color;
             }
         }
-    }
-}
-
-@media (max-width: 768px) {
-    .anchor {
-        display: none;
     }
 }

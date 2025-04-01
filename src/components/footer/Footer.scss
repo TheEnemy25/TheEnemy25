@@ -4,8 +4,7 @@
     display: flex;
     width: 100%;
     background: $black-color;
-    border-top: rem(2) solid $gray-color-transparent;
-
+    border-top: rem(1) solid $gray-color-transparent;
     padding: rem(32);
     margin: 0 auto;
     z-index: 1000;
@@ -18,8 +17,20 @@
         align-items: center;
         justify-content: space-between;
 
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            gap: rem(32);
+        }
+
         &-title {
             @include text-styles($h2-size, $white-color, Pacifico);
+            will-change: transform;
+            transition: transform 0.2s ease;
+
+            @include hover {
+                transform: scale(1.1);
+            }
         }
 
         &-text {
@@ -36,11 +47,13 @@
         &-icon {
             color: $white-color;
             font-size: rem(20);
-            transition: color 0.3s ease;
+            transition: color 0.2s ease;
 
             @each $name, $color in $social-colors {
-                &--#{$name}:hover {
-                    color: $color;
+                &--#{$name} {
+                    @include hover {
+                        color: $color;
+                    }
                 }
             }
         }

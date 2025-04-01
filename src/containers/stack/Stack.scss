@@ -51,12 +51,19 @@
             background-color: $gray-color-900;
             padding: rem(8);
             @include text-styles($p-size, $white-color, Rubik);
-            border: rem(2) solid $gray-color-800;
+            border: rem(1) solid $gray-color-800;
             border-radius: rem(8);
             transition: border 0.2s ease;
 
-            &:hover {
+            @include hover {
                 border-color: $secondary-color;
+
+                .stack__list-icon {
+                    mix-blend-mode: normal;
+                    filter: none;
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
             }
         }
 
@@ -68,13 +75,6 @@
             opacity: 0.7;
             filter: grayscale(100%) contrast(80%) brightness(80%);
             transition: opacity 0.2s ease, transform 0.2s ease;
-
-            .stack__list-link:hover & {
-                mix-blend-mode: normal;
-                filter: none;
-                opacity: 1;
-                transform: scale(1.1);
-            }
         }
 
         &-label {

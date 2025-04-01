@@ -22,7 +22,7 @@ const Footer = () => {
         <>
             <footer className="footer">
                 <div className="footer__container">
-                    <h2 className="footer__container-title">Portfolio</h2>
+                    <Link to="/" className="footer__container-title">Portfolio</Link>
 
                     <p className="footer__container-text">
                         © <time>{new Date().getFullYear()}</time> &nbsp;
@@ -32,9 +32,9 @@ const Footer = () => {
 
                     <div className="footer__container-icons">
                         {socialLinks.map(({ id, icon, url }) => (
-                            <Link key={id} to={url} className={`footer__container-icon footer__container-icon--${id}`} target="_blank" rel="noopener noreferrer">
+                            <a key={id} href={url} className={`footer__container-icon footer__container-icon--${id}`} target="_blank" rel="noopener noreferrer">
                                 {icon}
-                            </Link>
+                            </a>
                         ))}
                     </div>
                 </div>

@@ -1,7 +1,6 @@
 import "./Project.scss";
 import projectData from "../../data/project/projects.json";
 import { useLastCommitDate } from "../../hooks/project/useLastCommitDate";
-import { Link } from "react-router-dom";
 import GitHubIcon from "../../assets/svgs/skill/GitHubIcon";
 
 const ProjectContent: React.FC<{ projectId: string }> = ({ projectId }) => {
@@ -24,10 +23,10 @@ const ProjectContent: React.FC<{ projectId: string }> = ({ projectId }) => {
 
                 <ul className="project__repository-list">
                     <li className="project__repository-list-item">
-                        <Link to={project.repository.repositoryLink} className="project__repository-list-link">
+                        <a href={project.repository.repositoryLink} className="project__repository-list-link" target="_blank" rel="noopener noreferrer">
                             <GitHubIcon className="project__repository-list-icon" />
                             <span className="project__repository-list-label">Source</span>
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </div>

@@ -1,1 +1,59 @@
 @use '../../../styles/abstracts' as *;
+
+.certificates {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16) 0;
+
+    &__header {
+        &-title {
+            @include text-styles($h2-size, $white-color, Tight);
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(240), rem(320)));
+        gap: rem(16);
+
+        &-item {
+            display: flex;
+            gap: rem(16);
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: rem(1) solid $gray-color-900;
+            border-radius: rem(8);
+            transition: border 0.2s ease;
+
+            @include hover {
+                border: rem(1) solid $secondary-color;
+            }
+        }
+
+        &-link {
+            width: 100%;
+            padding: rem(8);
+            @include text-styles($p-size, $white-color, Tight);
+        }
+
+        &-photo {
+            display: flex;
+            flex-direction: column;
+            gap: rem(8);
+
+            &-img {
+                display: flex;
+                width: 100%;
+                height: rem(192);
+                border-radius: rem(8);
+                object-fit: cover;
+            }
+        }
+
+        &-caption {
+            @include text-styles($p-size, $white-color, Rubik);
+            text-align: center;
+        }
+    }
+}
