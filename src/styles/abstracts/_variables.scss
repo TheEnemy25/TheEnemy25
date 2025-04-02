@@ -8,7 +8,7 @@ $h3-size: dynamic-size(26, 20);
 $h4-size: dynamic-size(22, 18);
 $h5-size: dynamic-size(20, 16);
 $h6-size: dynamic-size(18, 14);
-$p-size: dynamic-size(16, 14);
+$p-size: rem(16);
 
 // ======== SOCIAL COLORS ========
 $social-colors: (
