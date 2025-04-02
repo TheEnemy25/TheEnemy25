@@ -2,11 +2,11 @@
     {
         "id": "masters",
         "link": "https://nulp.ua",
-        "image": "/images/nulp-logo.png"
+        "image": "/portfolio/images/nulp-logo.png"
       },
       {
         "id": "bachelors",
         "link": "https://nulp.ua",
-        "image": "/images/nulp-logo.png"
+        "image": "/portfolio/images/nulp-logo.png"
       }
 ]

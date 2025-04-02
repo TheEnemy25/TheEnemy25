@@ -17,7 +17,7 @@ const Anchor: React.FC = () => {
                         {sectionIds.map((id) => (
                             <li key={id} className="anchor__menu-item">
                                 <a
-                                    href={`#${id}`}
+                                    href={`/portfolio/#${id}`}
                                     className={`anchor__menu-link ${activeSection === id ? "anchor__menu-link--active" : ""}`}
                                 >
                                     {t(`sections.${id}`) || id.charAt(0).toUpperCase() + id.slice(1)}
