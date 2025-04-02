@@ -5,6 +5,12 @@
 }
 
 html {
+    // Prevents browsers from automatically adjusting text size
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; // For Safari, Chrome
+    -moz-text-size-adjust: 100%; // For Firefox
+    -ms-text-size-adjust: 100%; // For Internet Explorer
+
     &.is-lock {
         overflow: hidden;
     }
