@@ -1,14 +1,16 @@
 import experienceData from "../../../data/experience/experience.json";
 import "./Experience.scss";
 import { ExperienceItem } from "../../../types/experienceType";
+import { useTranslation } from "react-i18next";
 
 const Experience: React.FC = () => {
+    const { t } = useTranslation();
 
     return (
         <>
             <article className="experience">
                 <header className="experience__header">
-                    <h2 className="experience__header-title">Experience</h2>
+                    <h2 className="experience__header-title">{t("resume.experience")}</h2>
                 </header>
 
                 <div className="experience__container">

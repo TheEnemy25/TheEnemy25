@@ -1,20 +1,12 @@
 [
     {
         "id": "masters",
-        "title": "Master's Degree",
-        "time": "Sep 2023 - Dec 2024",
-        "specialization": "Computer ecological and economic monitoring",
-        "description": "Studied environmental data analysis, economic modeling, and software development for ecological monitoring. Worked on data processing and automation projects.",
         "link": "https://nulp.ua",
         "image": "/images/nulp-logo.png"
-    },
-    {
+      },
+      {
         "id": "bachelors",
-        "title": "Bachelor's Degree",
-        "time": "Sep 2019 - Jun 2023",
-        "specialization": "Computer Science",
-        "description": "Gained knowledge in software engineering, web development, and database management. Studied and worked with Java, C#, JavaScript, HTML, CSS, and SQL. Developed multiple projects using these technologies.",
         "link": "https://nulp.ua",
         "image": "/images/nulp-logo.png"
-    }
+      }
 ]

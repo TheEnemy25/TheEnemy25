@@ -1,56 +1,55 @@
 [
-    {
-      "id": "k-spot",
-      "title": "K-spot (front-end)",
-      "description": "Initially, a user interface was developed using React and SCSS. Later redesigned the project to Next.js to improve performance and include the server side rendering.",
-      "photo": "/images/movie-page.jpg",
-      "technologies": [
-        "Scss",
-        "Tailwind CSS",
-        "React",
-        "TypeScript",
-        "Next.js"
-      ],
-      "repository": {
-        "repositoryLink": "https://github.com/TheEnemy25/k-spot"
-      }
+  {
+    "id": "k-spot",
+    "photo": "/images/movie-page.jpg",
+    "technologies": [
+      "Scss",
+      "Tailwind CSS",
+      "React",
+      "TypeScript",
+      "Next.js"
+    ],
+    "repository": {
+      "repositoryLink": "https://github.com/TheEnemy25/k-spot"
     },
-    {
-        "id": "Cinema",
-        "title": "K-spot (back-end)",
-        "description": "Implemented authentication and authorization using IdentityServer4, data management with Entity Framework Core, and MS SQL as the database. Utilized AutoMapper for object mapping, FluentValidation for input validation, and MediatR to implement the CQRS pattern.",
-        "photo": "/images/movie-page.jpg",
-        "technologies": [
-          "Csharp",
-          "Entity Framework Core",
-          "MS SQL",
-          "ASP.NET Core Web API",
-          "AutoMapper",
-          "FluentValidation",
-          "MediatR",
-          "IdentityServer4"
-        ],
-        "repository": {
-          "repositoryLink": "https://github.com/TheEnemy25/Cinema/tree/master"
-        }
-      },
-      {
-        "id": "ProductsShop",
-        "title": "Device shop",
-        "description": "Computer Equipment E-commerce Project Developed an e-commerce platform for purchasing computer hardware, focusing on a user-friendly and efficient shopping experience.",
-        "photo": "/images/device-shop.jpg",
-        "technologies": [
-          "Csharp",
-          "Entity Framework Core",
-          "MS SQL",
-          "ASP.NET Core MVC",
-          "HTML",
-          "SCSS",
-          "Gulp"
-        ],
-        "repository": {
-          "repositoryLink": "https://github.com/TheEnemy25/ProductsShop/tree/master/ProductsShop"
-        }
-      }
-  ]
-  
+    "titleKey": "project.kSpotFrontendTitle",
+    "descriptionKey": "project.kSpotFrontendDescription"
+  },
+  {
+    "id": "Cinema",
+    "photo": "/images/movie-page.jpg",
+    "technologies": [
+      "Csharp",
+      "Entity Framework Core",
+      "MS SQL",
+      "ASP.NET Core Web API",
+      "AutoMapper",
+      "FluentValidation",
+      "MediatR",
+      "IdentityServer4"
+    ],
+    "repository": {
+      "repositoryLink": "https://github.com/TheEnemy25/Cinema/tree/master"
+    },
+    "titleKey": "project.kSpotBackendTitle",
+    "descriptionKey": "project.kSpotBackendDescription"
+  },
+  {
+    "id": "ProductsShop",
+    "photo": "/images/device-shop.jpg",
+    "technologies": [
+      "Csharp",
+      "Entity Framework Core",
+      "MS SQL",
+      "ASP.NET Core MVC",
+      "HTML",
+      "SCSS",
+      "Gulp"
+    ],
+    "repository": {
+      "repositoryLink": "https://github.com/TheEnemy25/ProductsShop/tree/master/ProductsShop"
+    },
+    "titleKey": "project.deviceShopTitle",
+    "descriptionKey": "project.deviceShopDescription"
+  }
+]

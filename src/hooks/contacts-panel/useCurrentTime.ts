@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export const useCurrentTime = (timeZone: string) => {
+    const { t } = useTranslation();
     const [currentTime, setCurrentTime] = useState("");
 
     useEffect(() => {
@@ -11,14 +13,14 @@ export const useCurrentTime = (timeZone: string) => {
         });
 
         const updateClock = () => {
-            setCurrentTime(`Local time: ${formatter.format(new Date())}`);
+            setCurrentTime(`${t("localTime")}: ${formatter.format(new Date())}`);
         };
 
         updateClock();
         const interval = setInterval(updateClock, 1000);
 
         return () => clearInterval(interval);
-    }, [timeZone]);
+    }, [timeZone, t]);
 
     return currentTime;
 };

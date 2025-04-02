@@ -1,23 +1,25 @@
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Certificates from "./certificates/Certificates";
 import Education from "./education/Education";
 import Experience from "./experience/Experience";
-import "./Resume.scss";
-import { useState } from "react";
+import "./ProfessionalProfile.scss";
 
-const Resume: React.FC = () => {
+const ProfessionalProfile: React.FC = () => {
+    const { t } = useTranslation();
     const [activeTab, setActiveTab] = useState("experience");
 
     const tabsData = [
-        { id: "experience", label: "Experience", component: <Experience /> },
-        { id: "education", label: "Education", component: <Education /> },
-        { id: "certificates", label: "Certificates", component: <Certificates /> },
+        { id: "experience", label: t("resume.experience"), component: <Experience /> },
+        { id: "education", label: t("resume.education"), component: <Education /> },
+        { id: "certificates", label: t("resume.certificates"), component: <Certificates /> },
     ];
 
     const activeTabComponent = tabsData.find((tab) => tab.id === activeTab)?.component;
 
     return (
         <>
-            <section id="experience & Education" className="resume">
+            <section id="professional-profile" className="resume">
                 <nav className="resume__tab" aria-label="Resume sections">
                     <ul className="resume__tab-list" role="tablist">
                         {tabsData.map((tab) => (
@@ -44,4 +46,4 @@ const Resume: React.FC = () => {
     );
 }
 
-export default Resume;
+export default ProfessionalProfile;

@@ -7,6 +7,7 @@ import {
     FaLinkedinIn,
     FaRegFilePdf,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const socialLinks = [
     { id: "pdf", icon: <FaRegFilePdf />, url: "#" },
@@ -17,6 +18,7 @@ const socialLinks = [
 ];
 
 const Footer = () => {
+    const { t } = useTranslation();
 
     return (
         <>
@@ -26,8 +28,7 @@ const Footer = () => {
 
                     <p className="footer__container-text">
                         © <time>{new Date().getFullYear()}</time> &nbsp;
-                        Andrian Kobryn  |
-                        All rights reserved
+                        {t('footer.text')}
                     </p>
 
                     <div className="footer__container-icons">

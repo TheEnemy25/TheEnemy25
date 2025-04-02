@@ -1,13 +1,15 @@
 import "./Certificates.scss";
 import certificatesData from "../../../data/certificates/certificates.json";
+import { useTranslation } from "react-i18next";
 
 const Certificates: React.FC = () => {
+    const { t } = useTranslation();
 
     return (
         <>
             <article className="certificates">
                 <header className="certificates__header">
-                    <h2 className="certificates__header-title">Certificates</h2>
+                    <h2 className="certificates__header-title">{t("resume.certificates")}</h2>
                 </header>
 
                 <ul className="certificates__list">
@@ -17,11 +19,11 @@ const Certificates: React.FC = () => {
                                 <figure className="certificates__list-photo">
                                     <img
                                         src={cert.image}
-                                        alt={`Certificate: ${cert.caption}`}
+                                        alt={`Certificate: ${t('certificates.caption')}`}
                                         className="certificates__list-photo-img"
                                     />
 
-                                    <figcaption className="certificates__list-caption">{cert.caption}</figcaption>
+                                    <figcaption className="certificates__list-caption">{t('certificates.caption')}</figcaption>
                                 </figure>
                             </a>
                         </li>

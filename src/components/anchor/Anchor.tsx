@@ -2,8 +2,10 @@ import React from "react";
 import "./Anchor.scss";
 import useSectionIds from "../../hooks/anchor/useSectionIds";
 import useScrollspy from "../../hooks/anchor/useScrollspy";
+import { useTranslation } from "react-i18next";
 
 const Anchor: React.FC = () => {
+    const { t } = useTranslation();
     const sectionIds = useSectionIds();
     const activeSection = useScrollspy(sectionIds);
 
@@ -18,7 +20,7 @@ const Anchor: React.FC = () => {
                                     href={`#${id}`}
                                     className={`anchor__menu-link ${activeSection === id ? "anchor__menu-link--active" : ""}`}
                                 >
-                                    {id.charAt(0).toUpperCase() + id.slice(1)}
+                                    {t(`sections.${id}`) || id.charAt(0).toUpperCase() + id.slice(1)}
                                 </a>
                             </li>
                         ))}

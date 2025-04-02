@@ -17,6 +17,8 @@
     }
 
     &__menu {
+        width: rem(185);
+        max-width: 100%;
 
         &-list {
             display: flex;

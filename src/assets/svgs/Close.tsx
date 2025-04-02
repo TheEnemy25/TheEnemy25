@@ -4,7 +4,6 @@ const Close: React.FC = () => {
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0,0,256,256"
-            className="modal__close-icon" //fix
         >
             <g
                 fill="#000000"

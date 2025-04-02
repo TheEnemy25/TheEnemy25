@@ -11,13 +11,15 @@ const ModalCloseButton: React.FC<ModalCloseButtonProps> = ({
     onClose,
     ariaLabel = "Close modal",
 }) => (
-    <button
-        className="modal__close--button"
-        onClick={onClose}
-        aria-label={ariaLabel}
-    >
-        <Close />
-    </button>
+    <>
+        <button
+            className="modal__close--button"
+            onClick={onClose}
+            aria-label={ariaLabel}
+        >
+            <Close />
+        </button>
+    </>
 );
 
 export default ModalCloseButton;

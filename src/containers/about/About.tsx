@@ -3,27 +3,25 @@ import "./About.scss";
 import photo from "/images/photo.png";
 import ImageModal from "../../components/modals/image-modal/ImageModal";
 import useWindowWidth from "../../hooks/about/useWindowWidth";
+import { useTranslation } from "react-i18next";
 
 const About: React.FC = () => {
     const [isModalOpen, setModalOpen] = useState(false);
     const windowWidth = useWindowWidth();
+    const { t } = useTranslation();
 
     const Header = () => (
         <header className="about__header">
-            <h1 className="about__header-title">Andrian Kobryn</h1>
-            <h2 className="about__header-subtitle">.NET Developer</h2>
+            <h1 className="about__header-title">{t('about.name')}</h1>
+            <h2 className="about__header-subtitle">{t('about.position')}</h2>
         </header>
     );
 
     const Info = () => (
         <section className="about__info">
-            <h2 className="about__info-title">Summary</h2>
+            <h2 className="about__info-title">{t('about.summaryTitle')}</h2>
             <p className="about__info-description">
-                Entry-level back-end developer with practical knowledge of C#, ASP.NET Core, EF
-                Core, MS SQL, and foundational front-end skills in HTML, CSS, React, Next.js, and
-                Tailwind. Passionate about building efficient and scalable solutions that meet modern
-                development standards. Committed to continuous professional growth and eager to
-                apply my knowledge to solve real-world challenges as part of a team of professionals.
+                {t('about.summaryText')}
             </p>
         </section>
     );
@@ -32,7 +30,7 @@ const About: React.FC = () => {
         <figure className="about__photo">
             <img
                 src={photo}
-                alt="Photo of Andrian Kobryn .NET Developer"
+                alt={t('about.photoAlt')}
                 className="about__photo-img"
                 onClick={() => setModalOpen(true)}
             />
@@ -60,7 +58,7 @@ const About: React.FC = () => {
                     </div>
                 )}
                 <ImageModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-                    <img src={photo} alt="Enlarged photo" className="image-modal__page--about" />
+                    <img src={photo} alt={t('about.photoAltLarge')} className="image-modal__page--about" />
                 </ImageModal>
             </section>
         </>

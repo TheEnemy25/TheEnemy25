@@ -1,12 +1,16 @@
 import "./ContactsPanel.scss";
 import { ContactWithIcon, getContactsData } from "../../types/contactsType";
 import { useCurrentTime } from "../../hooks/contacts-panel/useCurrentTime";
+import { useTranslation } from "react-i18next";
 
 const ContactsPanel = () => {
+    const { t } = useTranslation();
     const currentTime = useCurrentTime("Europe/Kyiv");
     const contactsData = getContactsData();
 
     const renderItem = (item: ContactWithIcon) => {
+        const text = t(`contacts.${item.id}`);
+
         if (item.id === "time") {
             return (
                 <time className="contacts-panel__menu-time">
@@ -25,7 +29,7 @@ const ContactsPanel = () => {
                     rel="noopener noreferrer"
                 >
                     <span className="contacts-panel__menu-icon">{item.icon}</span>
-                    {item.text}
+                    {text}
                 </a>
             );
         }
@@ -33,7 +37,7 @@ const ContactsPanel = () => {
         return (
             <p className="contacts-panel__menu-text">
                 <span className="contacts-panel__menu-icon">{item.icon}</span>
-                {item.text}
+                {text}
             </p>
         );
     };

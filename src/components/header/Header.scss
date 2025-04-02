@@ -54,7 +54,6 @@
     }
 
     &__menu {
-
         @include mobile {
             display: flex;
             flex-direction: column;
@@ -102,24 +101,23 @@
             }
 
             &-btn {
-                padding: 0;
                 background: none;
                 border: none;
-            }
-
-            &-icon {
-                display: flex;
-                width: rem(32);
                 mix-blend-mode: luminosity;
                 opacity: 0.7;
                 filter: grayscale(100%) contrast(80%) brightness(80%);
                 transition: opacity 0.2s ease, transform 0.2s ease;
 
-                @include hover {
+                &.active {
                     mix-blend-mode: normal;
                     filter: none;
                     opacity: 1;
                     transform: scale(1.1);
+                }
+
+                .header__language-switch-icon {
+                    display: flex;
+                    width: rem(32);
                 }
             }
         }

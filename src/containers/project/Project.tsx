@@ -1,26 +1,21 @@
 import "./Project.scss";
 import projectData from "../../data/project/projects.json";
-import { useLastCommitDate } from "../../hooks/project/useLastCommitDate";
+import { useTranslation } from "react-i18next";
 import GitHubIcon from "../../assets/svgs/skill/GitHubIcon";
 
 const ProjectContent: React.FC<{ projectId: string }> = ({ projectId }) => {
+    const { t } = useTranslation();
     const project = projectData.find((p) => p.id === projectId);
-    const lastCommitDate = useLastCommitDate(projectId);
 
     if (!project) {
-        return;
+        return null;
     }
+
+    const { titleKey, descriptionKey } = project;
 
     return (
         <article className="project__container">
             <div className="project__repository">
-                {lastCommitDate && (
-                    <div className="project__repository-commit">
-                        <p className="project__repository-text">Last updated: &nbsp;</p>
-                        <time className="project__repository-time">{lastCommitDate}</time>
-                    </div>
-                )}
-
                 <ul className="project__repository-list">
                     <li className="project__repository-list-item">
                         <a href={project.repository.repositoryLink} className="project__repository-list-link" target="_blank" rel="noopener noreferrer">
@@ -32,12 +27,12 @@ const ProjectContent: React.FC<{ projectId: string }> = ({ projectId }) => {
             </div>
 
             <figure className="project__container-photo">
-                <img src={project.photo} className="project__container-photo-img" alt={project.title} />
+                <img src={project.photo} className="project__container-photo-img" alt={t(titleKey)} />
             </figure>
 
-            <h3 className="project__container-title">{project.title}</h3>
+            <h3 className="project__container-title">{t(titleKey)}</h3>
 
-            <p className="project__container-description">{project.description}</p>
+            <p className="project__container-description">{t(descriptionKey)}</p>
 
             <ul className="project__container-list">
                 {project.technologies.map((tech) => (
@@ -51,19 +46,19 @@ const ProjectContent: React.FC<{ projectId: string }> = ({ projectId }) => {
 };
 
 const Project: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
-        <>
-            <section id="project" className="project">
-                <header className="project__header">
-                    <h2 className="project__header-title">All project</h2>
-                </header>
-                <div className="project__grid">
-                    {projectData.map((project) => (
-                        <ProjectContent key={project.id} projectId={project.id} />
-                    ))}
-                </div>
-            </section>
-        </>
+        <section id="project" className="project">
+            <header className="project__header">
+                <h2 className="project__header-title">{t("project.title")}</h2>
+            </header>
+            <div className="project__grid">
+                {projectData.map((project) => (
+                    <ProjectContent key={project.id} projectId={project.id} />
+                ))}
+            </div>
+        </section>
     );
 };
 

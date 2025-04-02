@@ -1,41 +1,34 @@
 [
   {
     "id": "resume",
-    "text": "Curriculum vitae (RESUME)",
     "link": "/docs/Andrian-Kobryn(Resume).pdf",
     "icon": "pdf"
   },
   {
     "id": "location",
-    "text": "Ukraine, Lviv",
     "icon": "location"
   },
   {
     "id": "time",
-    "text": "Loading time...",
     "icon": "clock"
   },
   {
     "id": "email",
-    "text": "andrikkobrin@gmail.com",
     "link": "mailto:andrikkobrin@gmail.com",
     "icon": "email"
   },
   {
     "id": "linkedin",
-    "text": "LinkedIn",
     "link": "https://www.linkedin.com/in/andrian-kobryn/",
     "icon": "linkedin"
   },
   {
     "id": "telegram",
-    "text": "Telegram",
     "link": "https://t.me/ENEMY_25",
     "icon": "telegram"
   },
   {
     "id": "github",
-    "text": "GitHub",
     "link": "https://github.com/TheEnemy25",
     "icon": "github"
   }

@@ -4,7 +4,6 @@ import contactsJson from "../data/contacts/contacts.json";
 export interface ContactItem {
     id: string;
     icon: IconKey;
-    text: string;
     link?: string;
 }
 
