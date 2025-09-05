@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+<h1 align="center">Hi 👋, I'm Andrian</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center"> 
+  <a href="mailto:andrikkobrin@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
+  </a>
+  <a href="https://www.linkedin.com/in/andrian-kobryn/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
+  </a>
+<!--   <a href="" target="_blank">
+     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" target="_blank" />
+  </a> -->
+</div>
 
-Currently, two official plugins are available:
+<hr/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h1 align="center">💯 Languages & Tools & Skills 💯</h1>
+<div align="center">
+    <img src="https://skillicons.dev/icons?i=cs," />
+    <img src="https://skillicons.dev/icons?i=html,css,sass,javascript,react," />
+    <img src="https://skillicons.dev/icons?i=visualstudio,vscode,github" /><br>
+</div><br><br>
 
-## Expanding the ESLint configuration
+<hr/>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+<h1 align="center">🌟 Stats 🌟</h1>
+<div align=center>
+  <img alt="Top langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TheEnemy25&layout=compact&theme=react&border_radius=10&&langs_count=8"/>
+</div>
