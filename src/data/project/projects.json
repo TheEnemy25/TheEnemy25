@@ -1,7 +1,7 @@
 [
   {
     "id": "k-spot",
-    "photo": "/portfolio/images/movie-page.jpg",
+    "photo": "/images/movie-page.jpg",
     "technologies": [
       "Scss",
       "Tailwind CSS",
@@ -17,7 +17,7 @@
   },
   {
     "id": "Cinema",
-    "photo": "/portfolio/images/movie-page.jpg",
+    "photo": "/images/movie-page.jpg",
     "technologies": [
       "Csharp",
       "Entity Framework Core",
@@ -36,7 +36,7 @@
   },
   {
     "id": "ProductsShop",
-    "photo": "/portfolio/images/device-shop.jpg",
+    "photo": "/images/device-shop.jpg",
     "technologies": [
       "Csharp",
       "Entity Framework Core",
