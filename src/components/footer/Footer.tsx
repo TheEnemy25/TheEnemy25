@@ -10,7 +10,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 const socialLinks = [
-    { id: "pdf", icon: <FaRegFilePdf />, url: "#" },
+    { id: "pdf", icon: <FaRegFilePdf />, url: "/TheEnemy25/docs/Andrian-Kobryn(Resume).pdf" },
     { id: "email", icon: <FaAt />, url: "mailto:andrikkobrin@gmail.com" },
     { id: "linkedin", icon: <FaLinkedinIn />, url: "https://www.linkedin.com/in/andrian-kobryn/" },
     { id: "telegram", icon: <FaTelegramPlane />, url: "https://t.me/ENEMY_25" },
